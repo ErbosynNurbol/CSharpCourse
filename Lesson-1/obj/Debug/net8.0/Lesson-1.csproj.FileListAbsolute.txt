@@ -1,0 +1,15 @@
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/bin/Debug/net8.0/Lesson-1
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/bin/Debug/net8.0/Lesson-1.deps.json
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/bin/Debug/net8.0/Lesson-1.runtimeconfig.json
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/bin/Debug/net8.0/Lesson-1.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/bin/Debug/net8.0/Lesson-1.pdb
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.AssemblyInfoInputs.cache
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.AssemblyInfo.cs
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.csproj.CoreCompileInputs.cache
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.sourcelink.json
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/refint/Lesson-1.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.pdb
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/Lesson-1.genruntimeconfig.cache
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-1/obj/Debug/net8.0/ref/Lesson-1.dll

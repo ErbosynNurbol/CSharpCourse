@@ -1,3 +1,5 @@
+using System.Text;
+
 public class Cyrl2ToteHelper
     {
 

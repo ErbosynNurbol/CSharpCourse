@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gOlBhQjwJT9tHT6gFRW6LDWTHtj624MC7mKV+GCn7DfImzrhsfwBkAYl0UICQX3TimkMvQOu91Oungx0xUrTxA==",
+  "dgSpecHash": "Ip2V74UFWywK/icqShX2/L+WBfBI0Ix+sbAARmFqryTzd97QWzj/2jjOckerMgAKJQX1YXjx7QvXsFD8pAL16Q==",
   "success": true,
   "projectFilePath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-7/Lesson-7.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/erbosynnurbol/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

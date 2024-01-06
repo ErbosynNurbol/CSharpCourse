@@ -14,19 +14,6 @@
             "related": ".xml"
           }
         }
-      },
-      "COMMON/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "compile": {
-          "bin/placeholder/COMMON.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/COMMON.dll": {}
-        }
       }
     }
   },
@@ -60,16 +47,11 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
-    },
-    "COMMON/1.0.0": {
-      "type": "project",
-      "path": "../COMMON/COMMON.csproj",
-      "msbuildProject": "../COMMON/COMMON.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "COMMON >= 1.0.0"
+      "Newtonsoft.Json >= 13.0.3"
     ]
   },
   "packageFolders": {
@@ -78,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-7/Lesson-7.csproj",
-      "projectName": "Lesson-7",
-      "projectPath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-7/Lesson-7.csproj",
+      "projectUniqueName": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/COMMON.csproj",
+      "projectName": "COMMON",
+      "projectPath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/COMMON.csproj",
       "packagesPath": "/Users/erbosynnurbol/.nuget/packages/",
-      "outputPath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-7/obj/",
+      "outputPath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/erbosynnurbol/.nuget/NuGet/NuGet.Config"
@@ -97,11 +79,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/COMMON.csproj": {
-              "projectPath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/COMMON.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -113,6 +91,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

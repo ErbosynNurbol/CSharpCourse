@@ -1,0 +1,12 @@
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/bin/Debug/net8.0/MODEL.deps.json
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/bin/Debug/net8.0/MODEL.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/bin/Debug/net8.0/MODEL.pdb
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/MODEL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/MODEL.AssemblyInfoInputs.cache
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/MODEL.AssemblyInfo.cs
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/MODEL.csproj.CoreCompileInputs.cache
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/MODEL.sourcelink.json
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/MODEL.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/refint/MODEL.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/MODEL.pdb
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/obj/Debug/net8.0/ref/MODEL.dll

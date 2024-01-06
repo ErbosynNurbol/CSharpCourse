@@ -3,7 +3,6 @@
 using System.Net.Security;
 using System.Reflection.Metadata;
 using System.Text;
-using Lesson_7;
 
 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 desktopPath = Path.Combine(desktopPath,"Files");
@@ -11,7 +10,7 @@ string filePath = Path.Combine(desktopPath, "hello.txt");
 string directoryPath = Path.GetDirectoryName(filePath);
 
 
-List<string> files  = FileHelper.GetAllFiles(directoryPath);
+List<string> files  = COMMON.FileHelper.GetAllFiles(directoryPath);
 foreach (string item in files)
 {
     Console.WriteLine(item);

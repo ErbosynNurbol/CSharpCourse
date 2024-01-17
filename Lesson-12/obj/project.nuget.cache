@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CbXKvNE/EsUsFSnzHXDCSKLFdF5eNzChQARQwh7y+2tL+UNnpHTLAYxC3PXCxZWD5X2d86164eVMnCvxBEj6eg==",
+  "success": true,
+  "projectFilePath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-12/Lesson-12.csproj",
+  "expectedPackageFiles": [
+    "/Users/erbosynnurbol/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

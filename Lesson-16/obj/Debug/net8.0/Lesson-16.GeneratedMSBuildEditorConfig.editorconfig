@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Lesson_16
+build_property.RootNamespace = Lesson_16
+build_property.ProjectDir = /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Home/Alem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BbGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Partial/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydGlhbC9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Partial/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFydGlhbC9IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Shared/Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Shared/LayoutMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dE1lbWJlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

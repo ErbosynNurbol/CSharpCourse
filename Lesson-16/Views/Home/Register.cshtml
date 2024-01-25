@@ -1,0 +1,85 @@
+@{
+    Layout =  "~/Views/Shared/LayoutMember.cshtml";
+    string email = (ViewData["email"]??string.Empty) as string;
+    int timeLeft = Convert.ToInt32(ViewData["timeLeft"]??0);
+}
+<div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-5">
+              <div class="card wow fadeIn" data-wow-delay="0.3s">
+                <div class="card-body">
+                  <div class="form-header purple-gradient">
+                    <h3 class="font-weight-500 my-2 py-1"><i class="fas fa-user"></i> Register:</h3>
+                  </div>
+                  <form>
+                 <div class="md-form">
+                    <i class="fas fa-envelope prefix white-text"></i>
+                    <input type="text" name="email" id="email" class="form-control" value="@email">
+                    <label for="email">Your email</label>
+                  </div>
+                 <div class="md-form input-group">
+                    <input type="text" class="form-control" id="verifyCode">
+                     <label for="verifyCode">Verify code</label>
+  <div class="input-group-append">
+    <button class="btn btn-md btn-secondary m-0 px-3" type="button" id="btnGetCode" data-loading-text="Жүктелуде...">Растау кодын алыңыз</button>
+  </div>
+                  </div>
+                 <div class="md-form">
+                    <i class="fas fa-user prefix white-text"></i>
+                    <input type="text" name="userName" id="userName" class="form-control">
+                    <label for="userName">Your name</label>
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-lock prefix white-text"></i>
+                    <input type="password" name="password" id="password" class="form-control">
+                    <label for="password">Your password</label>
+                  </div>
+
+                  <div class="text-center">
+                    <button type="submit" class="btn purple-gradient btn-lg">Sign up</button>
+                    <hr class="mt-4">
+                  </div>
+                  </form>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div></div>
+    @section scripts
+    {
+            <script>
+                 
+            $(function(){
+                    $("#btnGetCode").on("click",function(){
+                        var $btn = $(this),
+                            $emailInput = $("#email"),
+                            email = $emailInput.val();
+                            if(!email){
+                                 $emailInput.focus();
+                                 return;   
+                            }
+                            $.$btnStatus($btn,"loading");
+                            $.post("/Home/GetVerifyCode",{"email":email},function(data){
+                                if(data["status"] == "success"){
+                                      $.setRecodeTime($btn,60);
+                                 }else{
+                                     alert(data["message"]);
+                                      $.$btnStatus($btn,"reset");
+                                 }
+                       });
+                    });
+
+            });
+          </script>
+        @if(timeLeft>0)
+        {
+            <script>
+                $(function(){
+                    $.setRecodeTime($("#btnGetCode"),@timeLeft);
+                });
+            </script>
+        }
+
+    }
+         

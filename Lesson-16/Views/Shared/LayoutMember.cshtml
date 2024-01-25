@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Elorda IT</title>
+
+  <link rel="stylesheet" href="~/css/all.css">
+  <link rel="stylesheet" href="~/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/mdb.min.css">
+   <style>
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+    @@media (min-width: 560px) and (max-width: 740px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 650px;
+      }
+    }
+    @@media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .view  {
+        height: 650px;
+      }
+    }
+  </style>
+  @RenderSection("styles",false)
+</head>
+<body class="login-page">
+ 
+     <header>
+    <section class="view intro-2">
+      <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
+          @RenderBody()
+      </div>
+    </section>
+  </header>
+  <script src="~/js/jquery-3.4.1.min.js"></script>
+  <script src="~/js/popper.min.js"></script>
+  <script src="~/js/bootstrap.js"></script>
+  <script src="~/js/mdb.min.js"></script>
+  <script src="~/js/common.js" asp-append-version="true"></script>
+    <script>
+    new WOW().init();
+  </script>
+    @RenderSection("scripts",false)
+    @RenderSection("modals",false)
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>     
+<html>
+    <head>
+        <title>Admin Login</title>
+    </head>
+    <body>
+            <form action="/admin/login?backUrl=@ViewData["backUrl"]" method="post">
+                <input type="text" name="email" />
+                <input type="password" name="password" />
+                <input type="hidden" name="backUrl" value="@ViewData["backUrl"]"/>
+                <input type="submit" value="Login"/>
+            </form>
+    </body>
+</html

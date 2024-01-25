@@ -1,0 +1,15 @@
+<main>
+   <div class="container-fluid">
+      <button id="btnAlem" class="text-center text-blue" type="button">Alem bolma!!!</button>
+   </div>
+</main>
+@section scripts
+{
+   <script>
+      $(() => {
+         $("#btnAlem").on("click", () => {
+            alert("Ozing alem bolma!!!!");
+         });
+      });
+   </script>
+}

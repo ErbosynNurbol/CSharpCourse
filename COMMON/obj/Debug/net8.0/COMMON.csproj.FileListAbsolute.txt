@@ -11,3 +11,6 @@
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/obj/Debug/net8.0/COMMON.pdb
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/obj/Debug/net8.0/ref/COMMON.dll
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/obj/Debug/net8.0/COMMON.csproj.AssemblyReference.cache
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/bin/Debug/net8.0/MODEL.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/bin/Debug/net8.0/MODEL.pdb
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/COMMON/obj/Debug/net8.0/COMMON.csproj.CopyComplete

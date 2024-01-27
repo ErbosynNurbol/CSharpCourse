@@ -4,9 +4,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>
+    <ItemGroup>
+      <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
     <PackageReference Include="MailKit" Version="4.3.0"/>
+  </ItemGroup>
+  <ItemGroup>
+      <ProjectReference Include = "../MODEL/MODEL.csproj" />
   </ItemGroup>
   <ItemGroup>
       <EmbeddedResource Include="templates/emailvertification.html" />

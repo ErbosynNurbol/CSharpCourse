@@ -5,12 +5,29 @@ using Lesson_16.Helpers;
 using Microsoft.AspNetCore.Http;
 using COMMON;
 using MODEL;
+using DBHelper;
+using Dapper;
+using MODEL.FormatModels;
 
 //yafo jszp qewe vjry
 
 namespace Lesson_16.Controllers;
+
 public class HomeController : Controller
 {
+
+       #region  Қолданушының IP әдіресін алу +GetIPAddress()
+        public string GetIPAddress()
+        {
+            string locationIP = HttpContext.Connection.RemoteIpAddress.ToString();
+            if (HttpContext.Request.Headers["X-Real-IP"].Count() > 0)
+            {
+                locationIP = HttpContext.Request.Headers["X-Real-IP"];
+            }
+            return locationIP;
+        }
+        #endregion
+
     public IActionResult Index()
     {
         return View();
@@ -20,82 +37,141 @@ public class HomeController : Controller
     {
         return View();
     }
-    
+
     public IActionResult Login()
     {
 
         return View();
     }
 
-     public IActionResult Register()
+    public IActionResult Register()
     {
-       // ViewData["email"] =  HttpContext.Session.GetString("email");
-
-        //   string time =   HttpContext.Session.GetString("time");
-        // if(!string.IsNullOrEmpty(time))
-        // {
-        //     DateTime sendEmailTime = DateTime.ParseExact(time,"yyyy-MM-dd HH:mm:ss",CultureInfo.InvariantCulture);
-        //     int timeLeft = 60 - Convert.ToInt32((DateTime.Now  - sendEmailTime).TotalSeconds);
-        //     if(timeLeft<=0){
-        //         HttpContext.Session.Remove("email");
-        //         HttpContext.Session.Remove("time");
-        //     }
-        //     ViewData["timeLeft"] = timeLeft;
-        // }
-
-         if(Request.Cookies.TryGetValue("email",out string email) && Request.Cookies.TryGetValue("time",out string time))
-         {
-            email = AESHelper.DecryptText(email,"123456");
-            DateTime sendEmailTime = DateTime.ParseExact(time,"yyyy-MM-dd HH:mm:ss",CultureInfo.InvariantCulture);
-            int timeLeft = 60 - Convert.ToInt32((DateTime.Now  - sendEmailTime).TotalSeconds);
-            if(timeLeft<=0){
-                Response.Cookies.Delete("email");
-                Response.Cookies.Delete("time");
+        string key = HttpContext.Request.Query["key"].ToString();
+        if(!string.IsNullOrEmpty(key)){
+            TokenInfoModel model = QarTokenHelper.Decrypt(key);
+            uint last24Hour = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-24));
+            if(model != null && 
+            model.Type.Equals("Register",StringComparison.OrdinalIgnoreCase)
+            && model.Time > last24Hour)
+            {
+                     using (var _connection = Utilities.GetOpenConnection())
+                    {
+                          Person person = _connection.GetList<Person>("where qStatus = 0 and emailConfirm = 0 and id = @id", new { id = model.Id }).FirstOrDefault();
+                          if(person!=null)
+                          {
+                             person.EmailConfirm = 1;
+                             person.UpdateTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
+                             if(_connection.Update<Person>(person) >0)
+                             {
+                                return Redirect("/home/login");
+                             }
+                          }
+                    }
             }
-            ViewData["timeLeft"] = timeLeft;
-            ViewData["email"] = email;
-         }
+        }
         return View();
     }
 
+
     [HttpPost]
-    public IActionResult GetVerifyCode(string email)
+    public IActionResult Register(Person item, string passwordConfirm)
     {
-        if(string.IsNullOrWhiteSpace(email)) 
-        return Json(new {
-            Status = "error",
-            Message = "Please enter your email address!"
-        });
-        if(!RegexHelper.IsEmail(email))
-         return Json(new {
-            Status = "error",
-            Message = "Please enter valid email address!"
-        });
-        
-      
-        string code  = StringHelper.GetRandomString(6);
-        if(!EmailHelper.SendHtmlEmail("ErbosynNurbol@gmail.com",code,out string message))
-         {
-              return Json(new {
-                  Status = "error",
-                  Message = "Send email failed, please try again or contact administrator!"
-             });
+        if (string.IsNullOrWhiteSpace(item.Email))
+            return MessageHelper.RedirectAjax("Please enter your email address!", "error", "", "email");
+
+        if (!RegexHelper.IsEmail(item.Email))
+            return MessageHelper.RedirectAjax("Please enter your email address!", "error", "", "email");
+
+        if (string.IsNullOrWhiteSpace(item.Name))
+            return MessageHelper.RedirectAjax("Please enter your name!", "error", "", "name");
+
+
+        if (string.IsNullOrWhiteSpace(item.Password))
+            return MessageHelper.RedirectAjax("Please enter your password!", "error", "", "password");
+
+        if (item.Password.Length < 6 || item.Password.Length > 18)
+            return MessageHelper.RedirectAjax("Password length keep 6~18 chars!", "error", "", "password");
+
+
+        if (!item.Password.Equals(passwordConfirm))
+            return MessageHelper.RedirectAjax("Confirm new password!", "error", "", "passwordConfirm");
+
+        item.Password = MD5Helper.PasswordMd5Encrypt(item.Password);
+        uint currentTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
+        using (var _connection = Utilities.GetOpenConnection())
+        {
+            Person person = _connection.GetList<Person>("where qStatus = 0 and email = @email", new { email = item.Email }).FirstOrDefault();
+            if (person != null && person.EmailConfirm == 1)
+                return MessageHelper.RedirectAjax("This email already registered!", "error", "", null);
+
+            string ip = GetIPAddress();
+            int sendEmailSmsCount = _connection.RecordCount<Smssendlog>("where email = @email and sendTime > @sendTime", new {email = item.Email, sendTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-2))});
+            if(sendEmailSmsCount > 5) 
+                    return MessageHelper.RedirectAjax("Try later!!!", "error", "", null);
+                                int sendIpSmsCount = _connection.RecordCount<Smssendlog>("where ip = @ip and sendTime > @sendTime", new {ip, sendTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-2))});
+            if(sendIpSmsCount > 20) 
+                    return MessageHelper.RedirectAjax("Try later!!!", "error", "", null);
+
+            using (var tran = _connection.BeginTransaction())
+            {
+                try
+                {
+                    int? res = 0;
+                    uint personId = 0;
+                    if (person != null)
+                    {
+                        personId = person.Id;
+                        person.Name = item.Name;
+                        person.RegisterTime = currentTime;
+                        person.UpdateTime = currentTime;
+                        person.Password = item.Password;
+                        res = _connection.Update<Person>(person);
+                    }
+                    else
+                    {
+                        res = _connection.Insert<Person>(new Person()
+                        {
+                            Name = item.Name,
+                            Email = item.Email,
+                            EmailConfirm = 0,
+                            Password = item.Password,
+                            RegisterTime = currentTime,
+                            UpdateTime = currentTime,
+                            QStatus = 0
+                        });
+                        personId = Convert.ToUInt32(res ?? 0);
+                    }
+                    if (res > 0)
+                    {
+
+                        string encryptKey = QarTokenHelper.Encrypt(new TokenInfoModel()
+                        {
+                            Id = personId,
+                            Time = currentTime,
+                            Type = "register"
+                        });
+
+                        string link = $"http://localhost:5019/home/register?key={encryptKey}";
+                        if (!EmailHelper.SendHtmlEmail(item.Email, link, out string message))
+                        {
+                            return MessageHelper.RedirectAjax("Send email failed, please try again or contact administrator!", "error", "", null);
+                        }
+
+                        _connection.Insert<Smssendlog>(new Smssendlog(){
+                             Email = item.Email,
+                             Ip = ip,
+                             SendTime = currentTime,
+                        });
+                    }
+                    tran.Commit();
+                    return MessageHelper.RedirectAjax("Success sent email!", "success", "/home/index", null);
+                }
+                catch (Exception ex)
+                {
+                    tran.Rollback();
+                    return MessageHelper.RedirectAjax(ex.Message, "error", "", null);
+                }
+            }
         }
-        // HttpContext.Session.SetString("email",email);
-           // HttpContext.Session.SetString("time",DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-            CookieOptions cookieOptions = new CookieOptions();
-            cookieOptions.HttpOnly = true;
-            //cookieOptions.Domain = "www.elorda.com";
-            //4kb
-
-            cookieOptions.IsEssential = true;
-            email = AESHelper.EncryptText(email,"123456");
-            Response.Cookies.Append("email",email,cookieOptions);
-            Response.Cookies.Append("time",DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),cookieOptions);
-
-        return Json(new {
-            Status = "success",
-            Message = "Verify code is sent!"
-        });
     }
 }

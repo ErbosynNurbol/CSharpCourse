@@ -1,5 +1,14 @@
 global using Microsoft.AspNetCore.Mvc;
+using COMMON;
+using Dapper;
+using DBHelper;
 using Microsoft.AspNetCore.StaticFiles;
+
+
+ElordaSingleton.GetInstance.SetConnectionString("server=localhost;port=3306;database=el_db;user=el_dba;password=12344321;charset=utf8mb4");
+SimpleCRUD.SetDialect(SimpleCRUD.Dialect.MySQL);
+SimpleCRUD.SetTableNameResolver(new ElordaResolver());
+
 
 var builder = WebApplication.CreateBuilder(args);
 

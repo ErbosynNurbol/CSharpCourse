@@ -670,6 +670,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "MODEL": "1.0.0",
           "MailKit": "4.3.0",
           "Newtonsoft.Json": "13.0.3"
         },
@@ -678,6 +679,19 @@
         },
         "runtime": {
           "bin/placeholder/COMMON.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "MODEL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MODEL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MODEL.dll": {}
         }
       }
     }
@@ -2186,6 +2200,11 @@
       "type": "project",
       "path": "../COMMON/COMMON.csproj",
       "msbuildProject": "../COMMON/COMMON.csproj"
+    },
+    "MODEL/1.0.0": {
+      "type": "project",
+      "path": "../MODEL/MODEL.csproj",
+      "msbuildProject": "../MODEL/MODEL.csproj"
     }
   },
   "projectFileDependencyGroups": {

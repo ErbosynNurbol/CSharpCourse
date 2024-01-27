@@ -16,7 +16,7 @@ public  class EmailHelper
                 return  reader.ReadToEnd();
             }
         }
-        public static bool SendHtmlEmail(string email, string code,out string message)
+        public static bool SendHtmlEmail(string email, string link,out string message)
         {
             try
             {
@@ -26,7 +26,7 @@ public  class EmailHelper
                 mimeMessage.To.Add(new MailboxAddress("",email));
                 mimeMessage.Subject = "Email анықтау";
                 string htmlContet  = GetTemplateContent("emailvertification.html");
-                htmlContet = htmlContet.Replace("{{code}}",code);
+                htmlContet = htmlContet.Replace("{{link}}",link);
                 var bodyBuilder = new BodyBuilder
                 {
                     HtmlBody = htmlContet

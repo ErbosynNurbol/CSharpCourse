@@ -9,6 +9,21 @@ $.$btnStatus=  function($btn,status){
     }
 }
 
+$.$setFormInputStatus =  function($elem,message){
+    let $form = $elem.closest('form');
+    $form.find('.invalid-feedback').remove();
+    $form.find('.is-invalid').removeClass('is-invalid');
+    $elem.addClass('is-invalid');
+    var $feedback = $('<div class="invalid-feedback">'+message+'</div>');
+    $elem.after($feedback);
+    $elem.on("change input keyup",function(e){
+        if($(this).val()){
+            $(this).removeClass('is-invalid');
+        }
+        $(this).siblings('.invalid-feedback').remove();
+    });
+}
+
 $.setRecodeTime  = function($btn,time){
     if(time>0){
       $btn.attr('data-old-html',$btn.html());

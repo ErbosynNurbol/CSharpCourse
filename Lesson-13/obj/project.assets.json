@@ -670,6 +670,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "MODEL": "1.0.0",
           "MailKit": "4.3.0",
           "Newtonsoft.Json": "13.0.3"
         },
@@ -678,7 +679,10 @@
         },
         "runtime": {
           "bin/placeholder/COMMON.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "DBHelper/1.0.0": {
         "type": "project",
@@ -694,6 +698,16 @@
         },
         "runtime": {
           "bin/placeholder/DBHelper.dll": {}
+        }
+      },
+      "MODEL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MODEL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MODEL.dll": {}
         }
       }
     }
@@ -2207,6 +2221,11 @@
       "type": "project",
       "path": "../DBHelper/DBHelper.csproj",
       "msbuildProject": "../DBHelper/DBHelper.csproj"
+    },
+    "MODEL/1.0.0": {
+      "type": "project",
+      "path": "../MODEL/MODEL.csproj",
+      "msbuildProject": "../MODEL/MODEL.csproj"
     }
   },
   "projectFileDependencyGroups": {

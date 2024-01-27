@@ -26,7 +26,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/MODEL.csproj": {
+                "projectPath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/MODEL/MODEL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -60,6 +64,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

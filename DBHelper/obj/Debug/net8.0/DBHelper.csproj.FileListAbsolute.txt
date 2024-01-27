@@ -14,3 +14,5 @@
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/DBHelper/bin/Debug/net8.0/COMMON.dll
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/DBHelper/bin/Debug/net8.0/COMMON.pdb
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/DBHelper/obj/Debug/net8.0/DBHelper.csproj.CopyComplete
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/DBHelper/bin/Debug/net8.0/MODEL.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/DBHelper/bin/Debug/net8.0/MODEL.pdb

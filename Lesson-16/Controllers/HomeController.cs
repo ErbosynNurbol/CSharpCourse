@@ -8,11 +8,16 @@ using MODEL;
 using DBHelper;
 using Dapper;
 using MODEL.FormatModels;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 //yafo jszp qewe vjry
 
 namespace Lesson_16.Controllers;
 
+[Authorize]
 public class HomeController : Controller
 {
 
@@ -30,6 +35,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewData["realName"] = HttpContext.User.Identity.RealName();
         return View();
     }
 
@@ -38,14 +44,93 @@ public class HomeController : Controller
         return View();
     }
 
+
+    public IActionResult Logout()
+    {
+         HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+         return Redirect("/home/login");
+    }
+
+   [AllowAnonymous]
     public IActionResult Login()
     {
-
+         if (HttpContext.User.Identity.IsAuthenticated)
+         {
+                return Redirect($"/home/index");
+         }
         return View();
     }
 
+    [AllowAnonymous]
+    [HttpPost]
+    public IActionResult Login(Person item, string remember)
+    {
+         if (string.IsNullOrWhiteSpace(item.Email))
+            return MessageHelper.RedirectAjax("Please enter your email address!", "error", "", "email");
+
+        if (!RegexHelper.IsEmail(item.Email))
+            return MessageHelper.RedirectAjax("Please enter your email address!", "error", "", "email");
+ 
+        if (string.IsNullOrWhiteSpace(item.Password))
+            return MessageHelper.RedirectAjax("Please enter your password!", "error", "", "password");
+
+        if (item.Password.Length < 6 || item.Password.Length > 18)
+            return MessageHelper.RedirectAjax("Email or password incorrect!", "error", "", "");
+
+        string ip = GetIPAddress();
+        uint currentTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
+         using (var _connection = Utilities.GetOpenConnection())
+        {
+             object queryObj = new {ip , time  = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-3))};
+             if(_connection.RecordCount<Personloginlog>("where ip = @ip and time > @time ",queryObj ) > 100){
+                  return MessageHelper.RedirectAjax("Try again later!!", "error", "", "");
+             }
+              Person person =  _connection.GetList<Person>("where qStatus =  0 and email = @email", new {email = item.Email}).FirstOrDefault();
+              if(person == null)
+              {
+                    _connection.Insert<Personloginlog>(new Personloginlog(){
+                        PersonId = 0,
+                        Ip = ip,
+                        Time = currentTime,
+                        qStatus = 2
+                    });
+                    return MessageHelper.RedirectAjax("Email or password incorrect!", "error", "", "");
+              }
+
+             queryObj = new {ip , time  = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-3)),personId = person.Id};
+             if(_connection.RecordCount<Personloginlog>("where personId = @personId and  time > @time ", queryObj) > 3){
+                  return MessageHelper.RedirectAjax("Try again later!!", "error", "", "");
+             }
+              item.Password = MD5Helper.PasswordMd5Encrypt(item.Password);
+              if(!person.Password.Equals(item.Password))
+              {
+                   _connection.Insert<Personloginlog>(new Personloginlog(){
+                        PersonId = person.Id,
+                        Ip = ip,
+                        Time = currentTime,
+                        qStatus = 3
+                    });
+                  return MessageHelper.RedirectAjax("Email or password incorrect!", "error", "", "");
+              }
+
+            var identity = new ClaimsIdentity("AccountLogin");
+            identity.AddClaim(new Claim("RealName", person.Name));
+            identity.AddClaim(new Claim("PersonId", person.Id.ToString()));
+            identity.AddClaim(new Claim(ClaimTypes.Role, "User"));
+            ClaimsPrincipal principal = new ClaimsPrincipal(identity);
+            HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+            return MessageHelper.RedirectAjax("Login susccessfully!", "success", "/home/index", "");
+        }
+    }
+
+
+    [AllowAnonymous]
     public IActionResult Register()
     {
+          if (HttpContext.User.Identity.IsAuthenticated)
+         {
+                return Redirect($"/home/index");
+         }
         string key = HttpContext.Request.Query["key"].ToString();
         if(!string.IsNullOrEmpty(key)){
             TokenInfoModel model = QarTokenHelper.Decrypt(key);
@@ -74,6 +159,7 @@ public class HomeController : Controller
 
 
     [HttpPost]
+    [AllowAnonymous]
     public IActionResult Register(Person item, string passwordConfirm)
     {
         if (string.IsNullOrWhiteSpace(item.Email))

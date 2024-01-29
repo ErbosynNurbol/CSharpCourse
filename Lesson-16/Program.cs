@@ -2,6 +2,7 @@ global using Microsoft.AspNetCore.Mvc;
 using COMMON;
 using Dapper;
 using DBHelper;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.StaticFiles;
 
 
@@ -11,8 +12,21 @@ SimpleCRUD.SetTableNameResolver(new ElordaResolver());
 
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+}).AddCookie(options =>
+{
+    options.LoginPath = new PathString("/home/login/");
+    options.AccessDeniedPath = new PathString("/home/login/");
+    options.LogoutPath = new PathString("/home/signout/");
+    options.Cookie.Path = "/";
+    options.SlidingExpiration = true;
+    options.Cookie.Name = "qar_cookie";
+    options.Cookie.HttpOnly = true; //JS 
+});
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 
@@ -41,19 +55,17 @@ app.UseStaticFiles(new StaticFileOptions()
 });
 
 app.UseSession();
-
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "admin",
-    pattern: "{action=Register}/{id?}",
-    defaults: new {controller="Home" ,action="Register"});
+    pattern: "{action=Login}/{id?}",
+    defaults: new {controller="Home" ,action="Login"});
 
 app.MapControllerRoute(
     name: "home",
-    pattern: "{controller=Home}/{action=Register}/{id?}");
+    pattern: "{controller=Home}/{action=Login}/{id?}");
     
 app.MapFallbackToFile("404.html");
 

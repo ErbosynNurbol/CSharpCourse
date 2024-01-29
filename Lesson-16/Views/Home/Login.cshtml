@@ -4,49 +4,62 @@
 <div class="container">
           <div class="row">
             <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-5">
-
-              <!-- Form with header -->
               <div class="card wow fadeIn" data-wow-delay="0.3s">
                 <div class="card-body">
-
-                  <!-- Header -->
                   <div class="form-header purple-gradient">
                     <h3 class="font-weight-500 my-2 py-1"><i class="fas fa-user"></i> Log in:</h3>
                   </div>
-
-                  <!-- Body -->
-                  <div class="md-form">
-                    <i class="fas fa-user prefix white-text"></i>
-                    <input type="text" id="orangeForm-name" class="form-control">
-                    <label for="orangeForm-name">Your name</label>
-                  </div>
-
+                  <form action="/Home/Login" method="post" id="form-login">
                   <div class="md-form">
                     <i class="fas fa-envelope prefix white-text"></i>
-                    <input type="text" id="orangeForm-email" class="form-control">
-                    <label for="orangeForm-email">Your email</label>
+                    <input type="text" id="email" name="email" class="form-control">
+                    <label for="email">Email</label>
                   </div>
-
                   <div class="md-form">
                     <i class="fas fa-lock prefix white-text"></i>
-                    <input type="password" id="orangeForm-pass" class="form-control">
-                    <label for="orangeForm-pass">Your password</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                    <label for="password">Password</label>
                   </div>
-
                   <div class="text-center">
-                    <button class="btn purple-gradient btn-lg">Sign up</button>
-                    <hr class="mt-4">
-                    <div class="inline-ul text-center d-flex justify-content-center">
-                      <a class="p-2 m-2 fa-lg tw-ic"><i class="fab fa-twitter white-text"></i></a>
-                      <a class="p-2 m-2 fa-lg li-ic"><i class="fab fa-linkedin-in white-text"> </i></a>
-                      <a class="p-2 m-2 fa-lg ins-ic"><i class="fab fa-instagram white-text"> </i></a>
-                    </div>
+                    <button type="submit" class="btn purple-gradient btn-lg" data-loading-text="Loading...">Login</button>
                   </div>
-
+                  </form>
                 </div>
               </div>
-              <!-- Form with header -->
-
             </div>
           </div>
         </div>
+
+        @section scripts
+        {
+            <script>
+              $(function(){
+                  $('form#form-login').on("submit",function(){
+                          var $form = $(this),
+                              $btn = $form.find('button[type="submit"]'),
+                              url = $form.attr('action'),
+                              formData = $form.serialize();
+                              $.$btnStatus($btn,"loading");
+                            $.post(url,formData,function(data){
+                                 if(data['status'] == "success"){
+                                   toastr.success(data['message']);
+                                   setTimeout(function(){
+                                     window.location.href = data['backUrl'];
+                                   },700); 
+                                  }else{
+                                      $.$btnStatus($btn,"reset");
+                                       var $elem = $form.find('[name="'+data["data"]+'"]')
+                                       if($elem.length>0){
+                                          $elem.focus();
+                                          $.$setFormInputStatus($elem,data['message']);
+                                          return;
+                                        }
+                                         toastr.error(data['message']);
+                                  }
+                            });
+                          return false;
+                  });
+              });
+            </script>
+
+        }

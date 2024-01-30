@@ -35,3 +35,44 @@ $.setRecodeTime  = function($btn,time){
        $btn.prop("disabled",false);
     }
 };
+
+function showCustomModal(modal_url, modal_width) {
+    modal_url = encodeURI(modal_url);
+    $("#custom-modal").remove();
+    var modal = $('<div id="custom-modal" class="modal fade emle-modal" tabindex="-1" role="dialog">\
+                                <div class="modal-dialog" role="document" style="width:' + modal_width + '!important;">\
+                                    <div class="modal-content">\
+                                    </div>\
+                                </div>\
+                        </div>').modal();
+
+    if (modal_width !== '') {
+        modal.find(".modal-dialog").addClass('no-max-width');
+    } else {
+        modal.find(".modal-dialog").removeClass('no-max-width');
+    }
+
+    $('body').append(modal);
+    modal.find('.modal-content')
+        .load(modal_url, function (responseText, textStatus) {
+            if (textStatus === 'success' ||
+                textStatus === 'notmodified') {
+                modal.show();
+                if ($(window).width() < 768) {
+                    modal.find(".modal-dialog").css("width", "");
+                }
+            }
+        });
+
+    modal.on('hidden.bs.modal', function (e) {
+        $("#custom-modal").remove();
+    });
+}
+
+$(function(){
+    $('a[rel="custom-modal"]').on("click",function (e) {
+        showCustomModal($(this).attr('href'),($(this).attr('data-width')?$(this).attr('data-width'):''));
+        e.preventDefault(); //Stop Defaut Action
+    });
+
+});

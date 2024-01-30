@@ -60,12 +60,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "admin",
-    pattern: "{action=Login}/{id?}",
-    defaults: new {controller="Home" ,action="Login"});
+    pattern: "{action=Recover}/{id?}",
+    defaults: new {controller="Home" ,action="Recover"});
 
 app.MapControllerRoute(
     name: "home",
-    pattern: "{controller=Home}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=Recover}/{id?}");
     
 app.MapFallbackToFile("404.html");
 

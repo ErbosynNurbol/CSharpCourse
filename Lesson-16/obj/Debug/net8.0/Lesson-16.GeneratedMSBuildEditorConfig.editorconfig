@@ -30,8 +30,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Home/Recover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZWNvdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Modal/SendEmailMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW9kYWwvU2VuZEVtYWlsTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Partial/Footer.cshtml]

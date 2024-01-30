@@ -51,6 +51,103 @@ public class HomeController : Controller
          return Redirect("/home/login");
     }
 
+
+    #region Recover +Recover()
+    [AllowAnonymous]
+    public IActionResult Recover()
+    {
+        ViewData["tockenKey"] = HttpContext.Request.Query["key"].ToString();
+        return View();
+    }
+    #endregion
+
+    #region Recover  +Recover(Person item)
+    [HttpPost]
+    [AllowAnonymous]
+    public IActionResult Recover(Person item)
+    {
+        if (string.IsNullOrWhiteSpace(item.Email))
+            return MessageHelper.RedirectAjax("Please enter your email address!", "error", "", "email");
+
+        if (!RegexHelper.IsEmail(item.Email))
+            return MessageHelper.RedirectAjax("Please enter your email address!", "error", "", "email");
+         string ip = GetIPAddress();
+         uint currentTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
+        using (var _connection = Utilities.GetOpenConnection())
+        {
+            int sendEmailSmsCount = _connection.RecordCount<Smssendlog>("where email = @email and sendTime > @sendTime", new {email = item.Email, sendTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-2))});
+            if(sendEmailSmsCount > 5) 
+                    return MessageHelper.RedirectAjax("Try later!!!", "error", "", null);
+          
+            int sendIpSmsCount = _connection.RecordCount<Smssendlog>("where ip = @ip and sendTime > @sendTime", new {ip, sendTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-2))});
+            if(sendIpSmsCount > 20) 
+                    return MessageHelper.RedirectAjax("Try later!!!", "error", "", null);
+
+                Person person =  _connection.GetList<Person>("where qStatus = 0 and emailConfirm = 1 and email = @email", new {email = item.Email}).FirstOrDefault();
+                if( person == null)
+                       return MessageHelper.RedirectAjax("This email not registerd!", "error", "", "email");
+
+                         string encryptKey = QarTokenHelper.Encrypt(new TokenInfoModel()
+                        {
+                            Id = person.Id,
+                            Time = currentTime,
+                            Type = "recover"
+                        });
+
+                        string link = $"http://localhost:5019/home/recover?key={encryptKey}";
+                        if (!EmailHelper.SendHtmlEmail(item.Email, link, out string message))
+                        {
+                            return MessageHelper.RedirectAjax("Send email failed, please try again or contact administrator!", "error", "", null);
+                        }
+                        _connection.Insert<Smssendlog>(new Smssendlog(){
+                             Email = item.Email,
+                             Ip = ip,
+                             SendTime = currentTime,
+                        });    
+                 return MessageHelper.RedirectAjax("Email susccessfully sent!", "success", "", "");
+        }   
+    }
+
+    #endregion
+  
+    #region Update Password +UpdatePassword(string password, string passwordConfirm, string tockenKey)
+    [HttpPost]
+    [AllowAnonymous]
+    public IActionResult UpdatePassword(string password, string passwordConfirm, string tockenKey)
+    {
+     if (string.IsNullOrWhiteSpace(password))
+            return MessageHelper.RedirectAjax("Please enter your password!", "error", "", "password");
+
+        if (password.Length < 6 || password.Length > 18)
+            return MessageHelper.RedirectAjax("Password length keep 6~18 chars!", "error", "", "password");
+
+
+        if (!password.Equals(passwordConfirm))
+            return MessageHelper.RedirectAjax("Confirm new password!", "error", "", "passwordConfirm");
+        
+        if(string.IsNullOrEmpty(tockenKey))
+                return MessageHelper.RedirectAjax("Tocken key incorrect!", "error", "", "passwordConfirm");
+
+          TokenInfoModel model = QarTokenHelper.Decrypt(tockenKey);
+           if(model==null)
+              return MessageHelper.RedirectAjax("Tocken key incorrect!", "error", "", "passwordConfirm");
+                     using (var _connection = Utilities.GetOpenConnection())
+                    {
+                          Person person = _connection.GetList<Person>("where qStatus = 0 and emailConfirm = 1 and id = @id", new { id = model.Id }).FirstOrDefault();
+                          if(person ==null)
+                               return MessageHelper.RedirectAjax("This account has been deleted!", "error", "", "");
+                            person.Password = MD5Helper.PasswordMd5Encrypt(password);
+                            person.UpdateTime= UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
+                            if(_connection.Update<Person>(person)>0)
+                                 return MessageHelper.RedirectAjax("Password update successfully!", "success", "/home/login", "");
+
+                           return MessageHelper.RedirectAjax("Save failed!", "error", "", "");
+                    }
+
+    }
+    #endregion
+
+    #region Login +Login()
    [AllowAnonymous]
     public IActionResult Login()
     {
@@ -60,7 +157,10 @@ public class HomeController : Controller
          }
         return View();
     }
+    #endregion
 
+
+    #region Login +Login(Person item, string remember)
     [AllowAnonymous]
     [HttpPost]
     public IActionResult Login(Person item, string remember)
@@ -85,6 +185,7 @@ public class HomeController : Controller
              if(_connection.RecordCount<Personloginlog>("where ip = @ip and time > @time ",queryObj ) > 100){
                   return MessageHelper.RedirectAjax("Try again later!!", "error", "", "");
              }
+             
               Person person =  _connection.GetList<Person>("where qStatus =  0 and email = @email", new {email = item.Email}).FirstOrDefault();
               if(person == null)
               {
@@ -122,6 +223,7 @@ public class HomeController : Controller
             return MessageHelper.RedirectAjax("Login susccessfully!", "success", "/home/index", "");
         }
     }
+    #endregion
 
 
     [AllowAnonymous]
@@ -186,7 +288,7 @@ public class HomeController : Controller
         uint currentTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
         using (var _connection = Utilities.GetOpenConnection())
         {
-            Person person = _connection.GetList<Person>("where qStatus = 0 and email = @email", new { email = item.Email }).FirstOrDefault();
+            Person person = _connection.GetList<Person>("where qStatus = 0 and emailConfirm = 1 and email = @email", new { email = item.Email }).FirstOrDefault();
             if (person != null && person.EmailConfirm == 1)
                 return MessageHelper.RedirectAjax("This email already registered!", "error", "", null);
 

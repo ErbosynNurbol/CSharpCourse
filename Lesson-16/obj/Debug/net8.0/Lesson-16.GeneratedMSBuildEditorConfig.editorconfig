@@ -18,6 +18,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Admin/Article.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQXJ0aWNsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Admin/Partial/Article/CreateOrEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGFydGlhbC9BcnRpY2xlL0NyZWF0ZU9yRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Admin/Partial/Article/CreateOrEditScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGFydGlhbC9BcnRpY2xlL0NyZWF0ZU9yRWRpdFNjcmlwdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Admin/Partial/Article/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGFydGlhbC9BcnRpY2xlL0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Admin/Partial/Article/ListScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGFydGlhbC9BcnRpY2xlL0xpc3RTY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/Views/Home/Alem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BbGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

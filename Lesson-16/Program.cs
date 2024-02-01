@@ -27,7 +27,12 @@ builder.Services.AddAuthentication(options =>
     options.Cookie.Name = "qar_cookie";
     options.Cookie.HttpOnly = true; //JS 
 });
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(typeof(Lesson_16.Filters.QarActionFilter));
+});
+
 builder.Services.AddSession();
 
 var app = builder.Build();
@@ -60,12 +65,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "admin",
-    pattern: "{action=Recover}/{id?}",
-    defaults: new {controller="Home" ,action="Recover"});
+    pattern: "{action=Index}/{query?}",
+    defaults: new {controller="Home" ,action="Index"});
 
 app.MapControllerRoute(
     name: "home",
-    pattern: "{controller=Home}/{action=Recover}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{query?}");
     
 app.MapFallbackToFile("404.html");
 

@@ -12,30 +12,17 @@ using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using ZstdSharp.Unsafe;
 
 //yafo jszp qewe vjry
 
 namespace Lesson_16.Controllers;
 
 [Authorize]
-public class HomeController : Controller
+public class HomeController : QarBaseController
 {
-
-       #region  Қолданушының IP әдіресін алу +GetIPAddress()
-        public string GetIPAddress()
-        {
-            string locationIP = HttpContext.Connection.RemoteIpAddress.ToString();
-            if (HttpContext.Request.Headers["X-Real-IP"].Count() > 0)
-            {
-                locationIP = HttpContext.Request.Headers["X-Real-IP"];
-            }
-            return locationIP;
-        }
-        #endregion
-
     public IActionResult Index()
     {
-        ViewData["realName"] = HttpContext.User.Identity.RealName();
         return View();
     }
 
@@ -139,7 +126,14 @@ public class HomeController : Controller
                             person.Password = MD5Helper.PasswordMd5Encrypt(password);
                             person.UpdateTime= UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
                             if(_connection.Update<Person>(person)>0)
-                                 return MessageHelper.RedirectAjax("Password update successfully!", "success", "/home/login", "");
+                            {
+                                uint last2Hour  = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-2));
+
+                                _connection.Execute("update personloginlog set qStatus = 1 where personId = @personId and time >  @last2Hour ",
+                                new {personId = person.Id, last2Hour});
+                                return MessageHelper.RedirectAjax("Password update successfully!", "success", "/home/login", "");
+                            }
+                               
 
                            return MessageHelper.RedirectAjax("Save failed!", "error", "", "");
                     }
@@ -182,7 +176,7 @@ public class HomeController : Controller
          using (var _connection = Utilities.GetOpenConnection())
         {
              object queryObj = new {ip , time  = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-3))};
-             if(_connection.RecordCount<Personloginlog>("where ip = @ip and time > @time ",queryObj ) > 100){
+             if(_connection.RecordCount<Personloginlog>("where qStatus = 0 and ip = @ip and time > @time ",queryObj ) > 100){
                   return MessageHelper.RedirectAjax("Try again later!!", "error", "", "");
              }
              
@@ -199,7 +193,7 @@ public class HomeController : Controller
               }
 
              queryObj = new {ip , time  = UnixTimeHelper.ConvertToUnixTime(DateTime.Now.AddHours(-3)),personId = person.Id};
-             if(_connection.RecordCount<Personloginlog>("where personId = @personId and  time > @time ", queryObj) > 3){
+             if(_connection.RecordCount<Personloginlog>("where qStatus = 0 and personId = @personId and  time > @time ", queryObj) > 3){
                   return MessageHelper.RedirectAjax("Try again later!!", "error", "", "");
              }
               item.Password = MD5Helper.PasswordMd5Encrypt(item.Password);

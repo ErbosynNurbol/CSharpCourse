@@ -1,17 +1,44 @@
 global using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using COMMON;
 using Dapper;
 using DBHelper;
+using Lesson_16.DI_IOC;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.StaticFiles;
 
 
-ElordaSingleton.GetInstance.SetConnectionString("server=localhost;port=3306;database=el_db;user=el_dba;password=12344321;charset=utf8mb4");
-SimpleCRUD.SetDialect(SimpleCRUD.Dialect.MySQL);
-SimpleCRUD.SetTableNameResolver(new ElordaResolver());
+
+
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+string defaultConnection = builder.Configuration["Ankui:DefaultConnection"].ToString();
+
+
+builder.Services.AddTransient<ISiteInfo,SiteInfo>((iSiteInfo)=>{
+    return new SiteInfo(){
+         Connection = builder.Configuration["Ankui:DefaultConnection"].ToString(),
+         SiteUrl = builder.Configuration["Ankui:SiteUrl"].ToString(),
+         Port = int.TryParse(builder.Configuration["Ankui:Port"].ToString(),out int port)?port:0,
+         SaveTime = DateTime.Now
+    };
+});
+
+
+
+
+// builder.Services.AddSingleton(new SiteInfo(){
+//     Connection = builder.Configuration["Ankui:DefaultConnection"].ToString(),
+//     SiteUrl = builder.Configuration["Ankui:SiteUrl"].ToString(),
+//     Port = int.TryParse(builder.Configuration["Ankui:Port"].ToString(),out int port)?port:0,
+//     SaveTime = DateTime.Now
+// });
+
+ElordaSingleton.GetInstance.SetConnectionString(defaultConnection);
+
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -35,7 +62,20 @@ builder.Services.AddControllersWithViews(options =>
 
 builder.Services.AddSession();
 
+
+// builder.Services.AddTransient<IMator,BMWMator>(); //Dependency Injection
+// builder.Services.AddTransient<Car>(); //Inversation Of Control
+
+
+
+
 var app = builder.Build();
+
+SimpleCRUD.SetDialect(SimpleCRUD.Dialect.MySQL);
+SimpleCRUD.SetTableNameResolver(new ElordaResolver());
+
+// Car? myCar = app.Services.GetService<Car>();
+// myCar?.Start();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

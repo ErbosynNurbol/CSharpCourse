@@ -9,7 +9,7 @@ public class QarBaseController : Controller
     {
     }
 
-      #region  Қолданушының IP әдіресін алу +GetIPAddress()
+       #region  Қолданушының IP әдіресін алу +GetIPAddress()
           public string GetIPAddress()
         {
             string locationIP = HttpContext.Connection.RemoteIpAddress.ToString();

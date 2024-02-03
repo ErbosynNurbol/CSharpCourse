@@ -13,6 +13,8 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using ZstdSharp.Unsafe;
+using Lesson_16.DI_IOC;
+using Org.BouncyCastle.Crypto.Agreement.Srp;
 
 //yafo jszp qewe vjry
 
@@ -21,8 +23,21 @@ namespace Lesson_16.Controllers;
 [Authorize]
 public class HomeController : QarBaseController
 {
+
+    ISiteInfo _iSiteInfo;
+    DBHelper.IDbConnection _dbConnection;
+    IWebHostEnvironment _environment;
+    public HomeController(ISiteInfo iSiteInfo,DBHelper.IDbConnection dbConnection,IWebHostEnvironment environment)
+    {
+        _iSiteInfo = iSiteInfo;
+        _dbConnection = dbConnection;
+        _environment = environment;
+    }
     public IActionResult Index()
     {
+        //  Car  myCar = new Car(new BMWMator()); //Dependency Injection
+        //  myCar.Start()
+     
         return View();
     }
 

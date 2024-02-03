@@ -13,7 +13,8 @@ public class QarActionFilter : IActionFilter
     }
     public void OnActionExecuted(ActionExecutedContext context)
     {
-        int i = 1;
+        
+        
         
     }
 }

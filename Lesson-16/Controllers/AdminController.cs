@@ -8,13 +8,16 @@ namespace Lesson_16;
 [Authorize]
 public class AdminController : QarBaseController
 {
-    ISiteInfo _iSiteInfo;
-    public AdminController(ISiteInfo iSiteInfo)
+     CurrencyInfo _currencyInfo;
+    public AdminController(CurrencyInfo currencyInfo)
     {
-        _iSiteInfo = iSiteInfo;
+          _currencyInfo = currencyInfo;
+
     }
     public IActionResult Article(string query)
     {
+      var cInfo  = _currencyInfo;
+
         query = (query??string.Empty).ToLower();
         ViewData["query"] = query;
         ViewData["ip"] = GetIPAddress();

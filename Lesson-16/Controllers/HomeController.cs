@@ -14,9 +14,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using ZstdSharp.Unsafe;
 using Lesson_16.DI_IOC;
-
 //yafo jszp qewe vjry
-
 namespace Lesson_16.Controllers;
 
 [Authorize]
@@ -271,8 +269,6 @@ public class HomeController : QarBaseController
         }
         return View();
     }
-
-
     [HttpPost]
     [AllowAnonymous]
     public IActionResult Register(Person item, string passwordConfirm)

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DBHelper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7e79044c8be3ba7812bbd3002935d0e39b7b57f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80c5483dd7b313425be93f5cb3b9120603f1319b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DBHelper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DBHelper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

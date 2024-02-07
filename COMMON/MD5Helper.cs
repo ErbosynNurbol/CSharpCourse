@@ -41,4 +41,17 @@ public class MD5Helper
         } 
         #endregion
 
+    #region Get File Md5 +GetFileMd5(string filePath)
+    public static string GetFileMd5(string filePath)
+    {
+        using (var md5 = MD5.Create())
+        {
+            using (var stream = File.OpenRead(filePath))
+            {
+                var hash = md5.ComputeHash(stream);
+                return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+            }
+        }
+    }
+    #endregion
 }

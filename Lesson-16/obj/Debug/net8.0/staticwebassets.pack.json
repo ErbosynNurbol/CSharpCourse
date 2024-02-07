@@ -4037,84 +4037,468 @@
       "PackagePath": "staticwebassets/mdb-addons/preloader.html"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206110234913.png",
-      "PackagePath": "staticwebassets/uploads/20240206110234913.png"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/.gitignore",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/.gitignore"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206111356176.jpg",
-      "PackagePath": "staticwebassets/uploads/20240206111356176.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/.npmignore",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/.npmignore"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206112458551.jpg",
-      "PackagePath": "staticwebassets/uploads/20240206112458551.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/CHANGE.md",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/CHANGE.md"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206113835162.jpg",
-      "PackagePath": "staticwebassets/uploads/20240206113835162.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/LICENSE.md",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/LICENSE.md"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206113846751.jpg",
-      "PackagePath": "staticwebassets/uploads/20240206113846751.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/README.md",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/README.md"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206113846752.jpg",
-      "PackagePath": "staticwebassets/uploads/20240206113846752.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/bower.json",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/bower.json"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206113846752.png",
-      "PackagePath": "staticwebassets/uploads/20240206113846752.png"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/composer.json",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/composer.json"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/20240206113846754.jpg",
-      "PackagePath": "staticwebassets/uploads/20240206113846754.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/css/fileinput-rtl.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/css/fileinput-rtl.css"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061140400671.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061140400671.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/css/fileinput-rtl.min.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/css/fileinput-rtl.min.css"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061140400792.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061140400792.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/css/fileinput.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/css/fileinput.css"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061140400793.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061140400793.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/css/fileinput.min.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/css/fileinput.min.css"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061140400794.png",
-      "PackagePath": "staticwebassets/uploads/202402061140400794.png"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/examples/index-bs3.html",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/examples/index-bs3.html"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061140400815.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061140400815.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/examples/index-bs4.html",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/examples/index-bs4.html"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061158376641.mp3",
-      "PackagePath": "staticwebassets/uploads/202402061158376641.mp3"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/examples/index-bs5.html",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/examples/index-bs5.html"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061158479221.mp3",
-      "PackagePath": "staticwebassets/uploads/202402061158479221.mp3"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/img/loading-sm.gif",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/img/loading-sm.gif"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061158568561.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061158568561.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/img/loading.gif",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/img/loading.gif"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061158568562.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061158568562.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/fileinput.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/fileinput.js"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061158568563.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061158568563.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/fileinput.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/fileinput.min.js"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061158568564.png",
-      "PackagePath": "staticwebassets/uploads/202402061158568564.png"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/LANG.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/LANG.js"
     },
     {
-      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402061158568575.jpg",
-      "PackagePath": "staticwebassets/uploads/202402061158568575.jpg"
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/ar.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/ar.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/az.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/az.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/bg.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/bg.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/ca.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/ca.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/cr.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/cr.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/cs.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/cs.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/da.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/da.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/de.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/de.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/el.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/el.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/es.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/es.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/et.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/et.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/fa.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/fa.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/fi.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/fi.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/fr.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/fr.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/gl.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/gl.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/he.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/he.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/hu.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/hu.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/id.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/id.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/it.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/it.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/ja.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/ja.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/ka.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/ka.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/kr.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/kr.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/kz.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/kz.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/lt.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/lt.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/lv.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/lv.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/nl.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/nl.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/no.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/no.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/pl.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/pl.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/pt-BR.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/pt-BR.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/pt.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/pt.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/ro.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/ro.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/ru.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/ru.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/sk.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/sk.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/sl.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/sl.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/sr-latn.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/sr-latn.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/sv.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/sv.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/th.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/th.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/tr.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/tr.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/uk.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/uk.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/ur.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/ur.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/uz-Cy.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/uz-Cy.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/uz.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/uz.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/vi.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/vi.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/zh-TW.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/zh-TW.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/locales/zh.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/locales/zh.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/buffer.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/buffer.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/buffer.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/buffer.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/filetype.es6.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/filetype.es6.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/filetype.es6.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/filetype.es6.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/filetype.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/filetype.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/filetype.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/filetype.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/piexif.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/piexif.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/piexif.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/piexif.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/sortable.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/sortable.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/js/plugins/sortable.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/js/plugins/sortable.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/nuget/Package.nuspec",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/nuget/Package.nuspec"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/nuget/build.bat",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/nuget/build.bat"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/package.json",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/package.json"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/scss/fileinput-rtl.scss",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/scss/fileinput-rtl.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/scss/fileinput.scss",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/scss/fileinput.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/scss/themes/explorer-fa4/theme.scss",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/scss/themes/explorer-fa4/theme.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/scss/themes/explorer-fa5/theme.scss",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/scss/themes/explorer-fa5/theme.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/scss/themes/explorer-fa6/theme.scss",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/scss/themes/explorer-fa6/theme.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/scss/themes/explorer/theme.scss",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/scss/themes/explorer/theme.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/bs5/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/bs5/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/bs5/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/bs5/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.min.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.min.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa4/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.min.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.min.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa5/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.min.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.min.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer-fa6/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer/theme.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer/theme.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer/theme.min.css",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer/theme.min.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/explorer/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/explorer/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/fa4/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/fa4/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/fa4/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/fa4/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/fa5/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/fa5/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/fa5/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/fa5/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/fa6/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/fa6/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/fa6/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/fa6/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/gly/theme.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/gly/theme.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/bootstrap-fileinput/themes/gly/theme.min.js",
+      "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/gly/theme.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071044286601.jpg",
+      "PackagePath": "staticwebassets/uploads/202402071044286601.jpg"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071047168521.jpg",
+      "PackagePath": "staticwebassets/uploads/202402071047168521.jpg"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071145421501.pdf",
+      "PackagePath": "staticwebassets/uploads/202402071145421501.pdf"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071146519301.mp3",
+      "PackagePath": "staticwebassets/uploads/202402071146519301.mp3"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071203194551.png",
+      "PackagePath": "staticwebassets/uploads/202402071203194551.png"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071203197701.png",
+      "PackagePath": "staticwebassets/uploads/202402071203197701.png"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071203198911.mp3",
+      "PackagePath": "staticwebassets/uploads/202402071203198911.mp3"
     },
     {
       "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/webfonts/fa-brands-400.ttf",

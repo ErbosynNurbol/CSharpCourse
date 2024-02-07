@@ -1,8 +1,78 @@
+@{
+    List<Mediainfo> mediaInfoList = (ViewData["mediaInfoList"] ?? new List<Mediainfo>()) as List<Mediainfo>;
+}
+
 <script>
     $(function () {
-        $('#mFile').on('change', function (e) {
-            // $('#mFileName').val($(this).val());
+        $.fn.fileinputBsVersion = '4.3.1';
+        $("input#mFile").fileinput({
+            'theme': "fa6",
+            'uploadUrl': $('#form-upload').attr('action'),
+            'previewFileType': 'any',
+            'initialPreviewAsData': true,
+             uploadAsync: true,
+            reversePreviewOrder: true,
+            initialPreviewAsData: true,
+            overwriteInitial: false,
+            'initialPreviewConfig': [
+                @foreach (var mediaInfo in mediaInfoList)
+    {
+        string fileName = System.IO.Path.GetFileName(mediaInfo.FilePath);
+        string fileFormat = System.IO.Path.GetExtension(mediaInfo.FilePath).ToLower();
+        switch (fileFormat)
+        {
+            case ".png":
+            case ".jpg":
+            case ".jpeg":
+            case ".gif":
+                {
+                    <text>
+                                    {caption: "@fileName", size: @mediaInfo.FileSize, url: "/admin/SetMediaStatus", downloadUrl: '@mediaInfo.FilePath', key: @mediaInfo.Id}@(mediaInfo == mediaInfoList.LastOrDefault() ? "" : ",")
+                    </text>
+                }
+                break;
+            case ".mp4":
+                {
+                    <text>
+                                    {type: "video",filetype: "video/mp4",caption: "@fileName", size: @mediaInfo.FileSize, url: "/admin/SetMediaStatus", downloadUrl: '@mediaInfo.FilePath', key: @mediaInfo.Id}@(mediaInfo == mediaInfoList.LastOrDefault() ? "" : ",")
+                    </text>
+                }
+                break;
+              case ".mp3":
+                {
+                    <text>
+                                    {type: "audio",filetype: "audio/mp3",caption: "@fileName", size: @mediaInfo.FileSize, url: "/admin/SetMediaStatus", downloadUrl: '@mediaInfo.FilePath', key: @mediaInfo.Id}@(mediaInfo == mediaInfoList.LastOrDefault() ? "" : ",")
+                    </text>
+                }
+                break;
+            case ".pdf":
+                {
+                    <text>
+                                    {type: "pdf",caption: "@fileName", size: @mediaInfo.FileSize, url: "/admin/SetMediaStatus", downloadUrl: '@mediaInfo.FilePath', key: @mediaInfo.Id}@(mediaInfo == mediaInfoList.LastOrDefault() ? "" : ",")
+                    </text>
+                }
+                break;
+            case ".txt":
+                {
+                    <text>
+                                    {type: "text",caption: "@fileName", size: @mediaInfo.FileSize, url: "/admin/setmediastatus", downloadUrl: '@mediaInfo.FilePath', key: @mediaInfo.Id}@(mediaInfo == mediaInfoList.LastOrDefault() ? "" : ",")
+                    </text>
+                }
+                break;
+        }
+    }
+    ],
+            'previewFileIcon': '<i class="fas fa-file"></i>',
+            'initialPreview': [
+                @foreach (var mediaInfo in mediaInfoList)
+                 {
+                      <text>
+                        '@mediaInfo.FilePath'@(mediaInfo == mediaInfoList.LastOrDefault() ? "" : ",")
+                     </text>
+                }
+             ]
         });
+
         $('form#form-upload').on('submit', function () {
             let $form = $(this),
                 url = $form.attr('action'),

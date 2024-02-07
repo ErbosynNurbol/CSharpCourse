@@ -4,6 +4,7 @@ using Dapper;
 using DBHelper;
 using Lesson_16.DI_IOC;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.StaticFiles;
 
 //DI  => Dependency Injection
@@ -71,6 +72,14 @@ builder.Services.AddControllersWithViews(options =>
 });
 
 builder.Services.AddSession();
+
+builder.Services.Configure<FormOptions>(o => {
+    o.ValueLengthLimit = int.MaxValue;
+    o.ValueCountLimit = int.MaxValue;
+    o.MultipartBodyLengthLimit = int.MaxValue;
+    o.MemoryBufferThreshold = int.MaxValue;
+    o.KeyLengthLimit = int.MaxValue;
+});
 
 var app = builder.Build();
 

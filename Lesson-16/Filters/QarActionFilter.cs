@@ -11,7 +11,6 @@ public class QarActionFilter : IActionFilter
     {
        var controller = context.Controller as Controller;
        controller.ViewData["realName"] = context.HttpContext.User.Identity.RealName();
-       CurrencyInfo cInfo = context.HttpContext.RequestServices.GetService<CurrencyInfo>();
     }
     public void OnActionExecuted(ActionExecutedContext context)
     {

@@ -1,0 +1,52 @@
+<script>
+    $(function () {
+        $('#mFile').on('change', function (e) {
+            // $('#mFileName').val($(this).val());
+        });
+        $('form#form-upload').on('submit', function () {
+            let $form = $(this),
+                url = $form.attr('action'),
+                method = $form.attr('method'),
+                formData = new FormData($form[0]);
+
+            $.ajax({
+                "url": url,
+                "method": method,
+                "data": formData,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    if (data["status"] == "success") {
+                        toastr.success(data['message']);
+                        setTimeout(function () {
+                            console.log(data['data']);
+                        }, 700);
+                        $form.reset();
+                        let pValue = 0;
+                        $('#uploadProgressBar').css("width", pValue + "%").attr("aria-valuenow", pValue);
+                    } else {
+                        toastr.error(data['message']);
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error(thrownError);
+                    $form.reset();
+                    let pValue = 0;
+                    $('#uploadProgressBar').css("width", pValue + "%").attr("aria-valuenow", pValue);
+                },
+                xhr: function () {
+                    var xhr = new window.XMLHttpRequest();
+                    xhr.upload.addEventListener("progress", function (evt) {
+                        if (evt.lengthComputable) {
+                            var pValue = parseInt(evt.loaded / evt.total * 100);
+                            $('#uploadProgressBar').css("width", pValue + "%").attr("aria-valuenow", pValue);
+                        }
+                    }, false);
+                    return xhr;
+                }
+            });
+
+            return false;
+        });
+    });
+</script>

@@ -22,18 +22,14 @@ public class HomeController : QarBaseController
 {
     IConfiguration _configuration;
     IWebHostEnvironment _webHostEnvironment;
-    CurrencyInfo _currencyInfo;
-    public HomeController(IConfiguration configuration, IWebHostEnvironment webHostEnvironment,
-    CurrencyInfo currencyInfo)
+    public HomeController(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
     {
           _configuration = configuration;
           _webHostEnvironment = webHostEnvironment;
-          _currencyInfo = currencyInfo;
 
     }
     public IActionResult Index()
     {
-        var cInfo  = _currencyInfo;
         // int number =  10;
         // App app = new App(new FileLogger());
         // //Dependency Injection => DI
@@ -44,7 +40,6 @@ public class HomeController : QarBaseController
 
     public IActionResult Alem()
     {
-        var cInfo  = _currencyInfo;
         return View();
     }
 

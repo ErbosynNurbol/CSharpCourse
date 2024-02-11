@@ -1,0 +1,50 @@
+
+<form style="margin-top: 100px;width:300px;height;500px;margin-left: 300px;" id="form-img-upload"  enctype="multipart/form-data">
+    <input type="file" id="inputFile" name="imgFile" value="Choose a image" />
+      <div style="background-color: #eee;min-height:200px;">
+        <img id="myImage" src="~/img/sample.jpg" style="max-width:100%;height:auto;display:block;">
+      </div>
+      <button type="button" id="btnUploadImage">Upload</button>
+</form>
+
+@section scripts
+{
+<script>
+    const image = document.getElementById('myImage');
+    var cropParm = {
+         aspectRatio: 16 / 9,
+        viewMode:1
+        };
+    let cropper =null;
+    $('#inputFile').on('change',function(e){
+        var file =   this.files[0];
+         if (file) {
+                if (/^image\/\w+/.test(file.type)) {
+                    image.src = URL.createObjectURL(file);
+                     cropper = new Cropper(image,cropParm);
+
+                } else {
+                    window.alert('Please choose an image file.');
+                }
+            }
+
+    });
+
+    $('#btnUploadImage').on("click",function(){
+        var $form = $(this).closest('form'),
+            formData = new FormData($form[0]);
+             formData.append("cropInfoStr", JSON.stringify(cropper.getData()));
+            $.ajax({
+              "url":'Home/UploadImage',
+              data:formData,
+              method:"POST",
+              contentType:false,
+              processData:false,
+              success:function(data){
+                console.log(data);
+              }
+            });
+
+    });
+</script>
+}

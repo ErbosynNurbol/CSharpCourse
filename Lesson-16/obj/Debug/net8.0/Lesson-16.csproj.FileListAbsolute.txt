@@ -64,3 +64,8 @@
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/bin/Debug/net8.0/DBHelper.dll
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/bin/Debug/net8.0/DBHelper.pdb
 /Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/obj/Debug/net8.0/Lesson-16.MvcApplicationPartsAssemblyInfo.cs
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/bin/Debug/net8.0/SkiaSharp.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/bin/Debug/net8.0/runtimes/osx/native/libSkiaSharp.dylib
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/bin/Debug/net8.0/runtimes/win-arm64/native/libSkiaSharp.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/bin/Debug/net8.0/runtimes/win-x64/native/libSkiaSharp.dll
+/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/bin/Debug/net8.0/runtimes/win-x86/native/libSkiaSharp.dll

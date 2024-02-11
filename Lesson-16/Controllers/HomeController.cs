@@ -28,6 +28,36 @@ public class HomeController : QarBaseController
           _webHostEnvironment = webHostEnvironment;
 
     }
+
+    [HttpPost]
+    [AllowAnonymous]
+    public IActionResult UploadImage(string cropInfoStr, IFormFile imgFile)
+    {
+  
+           CropInfoModel cropInfo = JsonHelper.DeserializeObject<CropInfoModel>(cropInfoStr);    
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string descFilePath =  desktopPath + $"/{DateTime.Now.ToString("yyyyMMddmmssfff")}.png";        
+            using(MemoryStream stream = new MemoryStream())
+            {
+                   imgFile.CopyTo(stream);
+                   ImageHelper.CutImage(stream,descFilePath,(int)cropInfo.X,(int)cropInfo.Y,(int)cropInfo.Width,(int)cropInfo.Height);
+            }
+            return MessageHelper.RedirectAjax("Hah haha a df","success","",null);
+    }   
+
+    [AllowAnonymous]
+    public IActionResult Test()
+    {
+        string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        string filePath =  desktopPath + "/greencircle.png";
+        string descFilePath =  desktopPath + "/newgreencircle.png";        
+     
+        ImageHelper.CutImage(filePath,descFilePath,16f/9f);
+
+        //var cutInfo = ImageHelper.GetCutInfo(filePath,16f/9f);
+        //ImageHelper.DrawCircle(filePath,500,500);
+        return View();
+    }
     public IActionResult Index()
     {
         // int number =  10;

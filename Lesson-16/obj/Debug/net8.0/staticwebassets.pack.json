@@ -4473,6 +4473,582 @@
       "PackagePath": "staticwebassets/plugins/bootstrap-fileinput/themes/gly/theme.min.js"
     },
     {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.babelrc",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.babelrc"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.browserslistrc",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.browserslistrc"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.editorconfig",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.editorconfig"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.eslintignore",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.eslintignore"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.eslintrc.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.eslintrc.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.gitattributes",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.gitattributes"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.gitignore",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.gitignore"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/.stylelintignore",
+      "PackagePath": "staticwebassets/plugins/cropperjs/.stylelintignore"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/CHANGELOG.md",
+      "PackagePath": "staticwebassets/plugins/cropperjs/CHANGELOG.md"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/LICENSE",
+      "PackagePath": "staticwebassets/plugins/cropperjs"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/README.md",
+      "PackagePath": "staticwebassets/plugins/cropperjs/README.md"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/commitlint.config.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/commitlint.config.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/dist/cropper.common.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/dist/cropper.common.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/dist/cropper.css",
+      "PackagePath": "staticwebassets/plugins/cropperjs/dist/cropper.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/dist/cropper.esm.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/dist/cropper.esm.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/dist/cropper.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/dist/cropper.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/dist/cropper.min.css",
+      "PackagePath": "staticwebassets/plugins/cropperjs/dist/cropper.min.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/dist/cropper.min.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/dist/cropper.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/css/cropper.css",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/css/cropper.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/css/dist/cropper.css",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/css/dist/cropper.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/css/main.css",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/css/main.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/a-range-of-aspect-ratio.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/a-range-of-aspect-ratio.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/crop-a-round-image.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/crop-a-round-image.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/crop-cross-origin-image.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/crop-cross-origin-image.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/crop-on-canvas.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/crop-on-canvas.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/cropper-in-modal.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/cropper-in-modal.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/customize-preview.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/customize-preview.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/fixed-crop-box.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/fixed-crop-box.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/full-crop-box.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/full-crop-box.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/mask-an-image.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/mask-an-image.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/minimum-and-maximum-cropped-dimensions.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/minimum-and-maximum-cropped-dimensions.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/multiple-croppers.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/multiple-croppers.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/one-to-one-crop-box.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/one-to-one-crop-box.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/responsive-container.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/responsive-container.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/examples/upload-cropped-image-to-server.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/examples/upload-cropped-image-to-server.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/images/data.jpg",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/images/data.jpg"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/images/layers.jpg",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/images/layers.jpg"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/images/picture-2.jpg",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/images/picture-2.jpg"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/images/picture-3.jpg",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/images/picture-3.jpg"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/images/picture.jpg",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/images/picture.jpg"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/index.html",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/index.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/js/cropper.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/js/cropper.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/docs/js/main.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/docs/js/main.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/karma.conf.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/karma.conf.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/lint-staged.config.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/lint-staged.config.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/package-lock.json",
+      "PackagePath": "staticwebassets/plugins/cropperjs/package-lock.json"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/package.json",
+      "PackagePath": "staticwebassets/plugins/cropperjs/package.json"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/postcss.config.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/postcss.config.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/rollup.config.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/rollup.config.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/css/cropper.css",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/css/cropper.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/css/cropper.scss",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/css/cropper.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/images/bg.png",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/images/bg.png"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/index.css",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/index.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/index.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/index.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/index.scss",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/index.scss"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/change.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/change.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/constants.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/constants.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/cropper.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/cropper.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/defaults.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/defaults.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/events.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/events.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/handlers.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/handlers.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/methods.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/methods.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/preview.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/preview.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/render.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/render.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/template.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/template.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/src/js/utilities.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/src/js/utilities.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/stylelint.config.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/stylelint.config.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/helpers.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/helpers.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/Cropper.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/Cropper.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/events/crop.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/events/crop.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/events/cropend.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/events/cropend.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/events/cropmove.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/events/cropmove.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/events/cropstart.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/events/cropstart.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/events/ready.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/events/ready.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/events/zoom.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/events/zoom.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/clear.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/clear.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/crop.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/crop.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/destroy.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/destroy.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/disable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/disable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/enable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/enable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/getCanvasData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/getCanvasData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/getContainerData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/getContainerData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/getCropBoxData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/getCropBoxData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/getCroppedCanvas.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/getCroppedCanvas.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/getData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/getData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/getImageData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/getImageData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/move.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/move.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/moveTo.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/moveTo.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/noConflict.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/noConflict.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/replace.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/replace.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/reset.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/reset.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/rotate.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/rotate.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/rotateTo.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/rotateTo.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/scale.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/scale.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/scaleX.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/scaleX.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/scaleY.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/scaleY.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/setAspectRatio.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/setAspectRatio.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/setCanvasData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/setCanvasData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/setCropBoxData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/setCropBoxData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/setData.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/setData.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/setDefaults.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/setDefaults.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/setDragMode.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/setDragMode.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/zoom.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/zoom.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/methods/zoomTo.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/methods/zoomTo.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/aspectRatio.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/aspectRatio.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/autoCrop.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/autoCrop.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/autoCropArea.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/autoCropArea.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/background.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/background.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/center.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/center.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/checkCrossOrigin.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/checkCrossOrigin.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/checkOrientation.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/checkOrientation.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/crop.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/crop.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/cropBoxMovable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/cropBoxMovable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/cropBoxResizable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/cropBoxResizable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/cropend.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/cropend.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/cropmove.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/cropmove.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/cropstart.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/cropstart.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/data.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/data.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/dragMode.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/dragMode.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/guides.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/guides.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/highlight.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/highlight.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/initialAspectRatio.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/initialAspectRatio.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/minCanvasHeight.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/minCanvasHeight.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/minCanvasWidth.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/minCanvasWidth.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/minContainerHeight.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/minContainerHeight.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/minContainerWidth.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/minContainerWidth.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/minCropBoxHeight.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/minCropBoxHeight.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/minCropBoxWidth.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/minCropBoxWidth.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/modal.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/modal.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/movable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/movable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/preview.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/preview.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/ready.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/ready.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/responsive.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/responsive.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/restore.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/restore.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/rotatable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/rotatable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/scalable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/scalable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/toggleDragModeOnDblclick.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/toggleDragModeOnDblclick.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/viewMode.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/viewMode.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/wheelZoomRatio.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/wheelZoomRatio.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/zoom.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/zoom.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/zoomOnTouch.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/zoomOnTouch.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/zoomOnWheel.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/zoomOnWheel.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/test/specs/options/zoomable.spec.js",
+      "PackagePath": "staticwebassets/plugins/cropperjs/test/specs/options/zoomable.spec.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/types/index.d.ts",
+      "PackagePath": "staticwebassets/plugins/cropperjs/types/index.d.ts"
+    },
+    {
       "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/uploads/202402071044286601.jpg",
       "PackagePath": "staticwebassets/uploads/202402071044286601.jpg"
     },

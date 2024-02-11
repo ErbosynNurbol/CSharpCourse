@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o8DbJC03DFcKwVZjiV8hoKMlxtxOcz60eN1KuojPZTWU9k7EoBjNk1JdftDHGRR1DipBY1TBWKc1tqZn+ACLhg==",
+  "dgSpecHash": "gWyOzc4jbqG10APxHjpMxS16yA12dNvWbFsNe6BWnxYJ+NVGI3jcLJLzpOGrTJtgW20BYbj2EjXoezGnyc5fYw==",
   "success": true,
   "projectFilePath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/DBHelper/DBHelper.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,9 @@
     "/Users/erbosynnurbol/.nuget/packages/mimekit/4.3.0/mimekit.4.3.0.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/mysql.data/8.2.0/mysql.data.8.2.0.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/erbosynnurbol/.nuget/packages/skiasharp/3.0.0-preview.1.8/skiasharp.3.0.0-preview.1.8.nupkg.sha512",
+    "/Users/erbosynnurbol/.nuget/packages/skiasharp.nativeassets.macos/3.0.0-preview.1.8/skiasharp.nativeassets.macos.3.0.0-preview.1.8.nupkg.sha512",
+    "/Users/erbosynnurbol/.nuget/packages/skiasharp.nativeassets.win32/3.0.0-preview.1.8/skiasharp.nativeassets.win32.3.0.0-preview.1.8.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/system.configuration.configurationmanager/4.4.1/system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/system.diagnostics.diagnosticsource/7.0.2/system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",

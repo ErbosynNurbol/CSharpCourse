@@ -114,8 +114,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "admin",
-    pattern: "{action=Test}/{query?}",
-    defaults: new {controller="Home" ,action="Test"});
+    pattern: "{action=Editor}/{query?}",
+    defaults: new {controller="Home" ,action="Editor"});
 
 app.MapControllerRoute(
     name: "home",

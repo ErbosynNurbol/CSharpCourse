@@ -45,14 +45,21 @@ public class HomeController : QarBaseController
             return MessageHelper.RedirectAjax("Hah haha a df","success","",null);
     }   
 
+
+      [AllowAnonymous]
+      public IActionResult Editor()
+      {
+        return View();
+      }
+
     [AllowAnonymous]
     public IActionResult Test()
     {
-        string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        string filePath =  desktopPath + "/greencircle.png";
-        string descFilePath =  desktopPath + "/newgreencircle.png";        
+        // string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        // string filePath =  desktopPath + "/greencircle.png";
+        // string descFilePath =  desktopPath + "/newgreencircle.png";        
      
-        ImageHelper.CutImage(filePath,descFilePath,16f/9f);
+        // ImageHelper.CutImage(filePath,descFilePath,16f/9f);
 
         //var cutInfo = ImageHelper.GetCutInfo(filePath,16f/9f);
         //ImageHelper.DrawCircle(filePath,500,500);

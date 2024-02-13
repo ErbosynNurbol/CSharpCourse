@@ -5,6 +5,7 @@ namespace Lesson_16;
 public class QarBaseController : Controller
 { 
 
+    public readonly string no_image = "/img/no_image.png";
      public QarBaseController()
     {
     }
@@ -26,5 +27,13 @@ public class QarBaseController : Controller
             return HttpContext.User.Identity.PersonId();
         }
 
+     public int GetIntQueryParam(string paramName, int defaultValue = 0)
+     {
+         return int.TryParse(Request.Query[paramName].ToString(), out int paramValue)?paramValue:defaultValue;
+     }
 
+     public string GetStringQueryParam(string paramName)
+     {
+         return Request.Query[paramName].ToString();
+     }
 }

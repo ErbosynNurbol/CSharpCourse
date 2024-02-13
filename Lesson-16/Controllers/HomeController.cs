@@ -28,6 +28,49 @@ public class HomeController : QarBaseController
           _webHostEnvironment = webHostEnvironment;
 
     }
+  
+
+     [AllowAnonymous]
+     public IActionResult Article(string query)
+     {
+         query = (query??string.Empty).ToLower();
+         if(query.Equals("list"))
+         {  
+                int page = GetIntQueryParam("page",1);
+                page = page<=0?1:page;
+                int pageSize = GetIntQueryParam("pageSize",10);
+                pageSize = pageSize<=0?10:pageSize;
+                string keyWord = GetStringQueryParam("keyWord");
+                ViewData["page"] = page;
+                ViewData["pageSize"] = pageSize;
+                using(var _connection = Utilities.GetOpenConnection())
+                {
+                   string querySql = "where qStatus = 0";
+                   if(!string.IsNullOrEmpty(keyWord))
+                   {
+                        querySql += " and keyWord = @keyWord ";
+                   }
+                   object queryObj = new {keyWord,start = (page-1)*pageSize,length = pageSize};
+                   int totalCount = _connection.RecordCount<Article>(querySql,queryObj);
+                   ViewData["totalCount"]  = totalCount;
+                   ViewData["totalPage"] = totalCount / pageSize + (totalCount % pageSize == 0 ? 0 : 1);
+                   ViewData["articleList"] = _connection.Query<Article>("select title,thumbnailUrl,latynUrl,addTime,author,shortDescription from article "+querySql + " order by addTime desc limit @start, @length ",queryObj)
+                   .Select(x=>new Article(){
+                     Title = x.Title,
+                     ThumbnailUrl =  string.IsNullOrEmpty(x.ThumbnailUrl)?no_image:"https://infohub.kz"+x.ThumbnailUrl,
+                     LatynUrl = x.LatynUrl,
+                     AddTime = x.AddTime,
+                     Author = x.Author,
+                     ShortDescription = x.ShortDescription
+                   }).ToList();
+                }
+               return View("~/Views/Home/ArticleList.cshtml"); 
+         }else{
+
+
+            return View("~/Views/Home/ArticleView.cshtml"); 
+         }
+     }
 
     [HttpPost]
     [AllowAnonymous]
@@ -81,10 +124,10 @@ public class HomeController : QarBaseController
         using(var _connection = Utilities.GetOpenConnection())
         {
             _connection.Insert<Article>(new Article(){
-                Content = content,
-                AddTime  = currentTime,
-                UpdateTime = currentTime,
-                QStatus = 0
+                    FullDescription = content,
+                    AddTime  = currentTime,
+                     UpdateTime = currentTime,
+                     QStatus = 0
                 });
         }
           return Content("Save successfully!");

@@ -1,0 +1,168 @@
+  @{
+    List<Article> articleList= (ViewData["articleList"]??new List<Article>()) as List<Article>;
+    int pageIndex = Convert.ToInt32(ViewData["page"]??1);
+    int pageSize = Convert.ToInt32(ViewData["pageSize"]??10);
+    int totalPage = Convert.ToInt32(ViewData["totalPage"]??0);
+    int totalCount = Convert.ToInt32(ViewData["totalCount"]??0);
+  }
+  <main>
+
+    <div class="container">
+
+      <!-- Section: Blog v.3 -->
+      <section class="my-5 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
+
+        <!-- Section heading -->
+        <h2 class="text-center my-5 h1">Recent posts</h2>
+
+        <!-- Section description -->
+        <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.</p>
+
+        @foreach(var article in articleList)
+        {
+          string addTimeStr =  COMMON.UnixTimeHelper.UnixTimeToDateTime(article.AddTime).ToString("dd/MM/yyyy hh:mm");
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="view overlay z-depth-1">
+              <img src="@(article.ThumbnailUrl.Replace("_small.","_middle."))" class="img-fluid" alt="@article.Title">
+              <a href="/article/@(article.LatynUrl).html">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-7 mb-4">
+            <a href="/article/@(article.LatynUrl).html" class="teal-text">
+              <h6 class="pb-1"><i class="fas fa-heart"></i><strong> Lifestyle </strong></h6>
+            </a>
+            <h4 class="mb-4"><strong>@article.Title</strong></h4>
+            <p>@article.ShortDescription</p>
+            <p>by <a><strong>@article.Author</strong></a>, @addTimeStr</p>
+            <a  href="/article/@(article.LatynUrl).html" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+            @if(article!= articleList.LastOrDefault())
+            {
+                <hr class="mb-5">
+            }
+        }
+     
+        <nav id="pagination" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+        
+        </nav>
+        <!-- /Pagination dark -->
+
+      </section>
+      <!-- Section: Blog v.3 -->
+
+      <hr class="mb-5">
+
+      <!-- Section: Blog v.2 -->
+      <section class="text-center my-5 wow fadeIn" data-wow-delay="0.3s">
+
+        <!-- Section heading -->
+        <h2 class="text-center my-5 h1">Older posts</h2>
+        <!-- Section description -->
+        <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.</p>
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+            <!-- Featured image -->
+            <div class="view overlay z-depth-1 mb-2">
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg" class="img-fluid"
+                alt="First sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!-- Excerpt -->
+            <a href="" class="pink-text">
+              <h6 class="mb-3 mt-3"><i class="fas fa-map "></i><strong> Environment</strong></h6>
+            </a>
+            <h4 class="font-weight-bold mb-3">This is title of the news</h4>
+            <p>by <a><strong>Billy Forester</strong></a>, 15/07/2016</p>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+              placeat facere possimus voluptas.</p>
+            <a class="btn btn-primary">Read more</a>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+            <!-- Featured image -->
+            <div class="view overlay z-depth-1 mb-2">
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" class="img-fluid"
+                alt="Second sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!-- Excerpt -->
+            <a href="" class="indigo-text">
+              <h6 class="mb-3 mt-3"><i class="fas fa-plane"></i><strong> Travels</strong></h6>
+            </a>
+            <h4 class="font-weight-bold mb-3">This is title of the news</h4>
+            <p>by <a><strong>Billy Forester</strong></a>, 12/07/2016</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+              deleniti atque corrupti quos dolores.</p>
+            <a class="btn btn-primary">Read more</a>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4 col-md-6">
+            <!-- Featured image -->
+            <div class="view overlay z-depth-1 mb-2">
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg" class="img-fluid"
+                alt="Thrid sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!-- Excerpt -->
+            <a href="" class="cyan-text">
+              <h6 class="mb-3 mt-3"><i class="fas fa-leaf "></i><strong> Animals</strong></h6>
+            </a>
+            <h4 class="font-weight-bold mb-3">This is title of the news</h4>
+            <p>by <a><strong>Billy Forester</strong></a>, 10/07/2016</p>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, quia consequuntur magni
+              dolores eos qui ratione voluptatem.</p>
+            <a class="btn btn-primary">Read more</a>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </section>
+      <!-- Section: Blog v.2 -->
+
+    </div>
+
+  </main>
+
+  @section scripts
+  {
+      <script>
+        $(function(){
+
+$('#pagination').bootpag({
+    total: @totalPage,          
+    page: @pageIndex,   
+    maxVisible: $(window).width()>768?5:3,    
+    leaps: true
+}).on("page", function(event, num){
+    window.location.href = "/article/list?pageSize=@(pageSize)&page="+num;
+});
+  });
+      </script>
+  }

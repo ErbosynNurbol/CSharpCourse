@@ -1173,6 +1173,10 @@
       "PackagePath": "staticwebassets/img/lightbox/preloader.gif"
     },
     {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/img/no_image.png",
+      "PackagePath": "staticwebassets/img/no_image.png"
+    },
+    {
       "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/img/overlays/01.png",
       "PackagePath": "staticwebassets/img/overlays/01.png"
     },
@@ -1711,6 +1715,14 @@
     {
       "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/js/jquery-3.4.1.min.js",
       "PackagePath": "staticwebassets/js/jquery-3.4.1.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/js/jquery.bootpag.js",
+      "PackagePath": "staticwebassets/js/jquery.bootpag.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/js/jquery.bootpag.min.js",
+      "PackagePath": "staticwebassets/js/jquery.bootpag.min.js"
     },
     {
       "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/js/mdb.js",
@@ -5047,6 +5059,82 @@
     {
       "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/cropperjs/types/index.d.ts",
       "PackagePath": "staticwebassets/plugins/cropperjs/types/index.d.ts"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/.gitignore",
+      "PackagePath": "staticwebassets/plugins/paginationjs/.gitignore"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/.npmignore",
+      "PackagePath": "staticwebassets/plugins/paginationjs/.npmignore"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/.npmrc",
+      "PackagePath": "staticwebassets/plugins/paginationjs/.npmrc"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/Gruntfile.js",
+      "PackagePath": "staticwebassets/plugins/paginationjs/Gruntfile.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/LICENSE",
+      "PackagePath": "staticwebassets/plugins/paginationjs"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/README.md",
+      "PackagePath": "staticwebassets/plugins/paginationjs/README.md"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/bower.json",
+      "PackagePath": "staticwebassets/plugins/paginationjs/bower.json"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/component.json",
+      "PackagePath": "staticwebassets/plugins/paginationjs/component.json"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/dist/pagination.css",
+      "PackagePath": "staticwebassets/plugins/paginationjs/dist/pagination.css"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/dist/pagination.js",
+      "PackagePath": "staticwebassets/plugins/paginationjs/dist/pagination.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/dist/pagination.less",
+      "PackagePath": "staticwebassets/plugins/paginationjs/dist/pagination.less"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/dist/pagination.min.js",
+      "PackagePath": "staticwebassets/plugins/paginationjs/dist/pagination.min.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/docs/cn.md",
+      "PackagePath": "staticwebassets/plugins/paginationjs/docs/cn.md"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/docs/en.md",
+      "PackagePath": "staticwebassets/plugins/paginationjs/docs/en.md"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/examples/images/paginationjs_record.gif",
+      "PackagePath": "staticwebassets/plugins/paginationjs/examples/images/paginationjs_record.gif"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/examples/pagination.html",
+      "PackagePath": "staticwebassets/plugins/paginationjs/examples/pagination.html"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/package.json",
+      "PackagePath": "staticwebassets/plugins/paginationjs/package.json"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/src/pagination.js",
+      "PackagePath": "staticwebassets/plugins/paginationjs/src/pagination.js"
+    },
+    {
+      "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/paginationjs/src/pagination.less",
+      "PackagePath": "staticwebassets/plugins/paginationjs/src/pagination.less"
     },
     {
       "Id": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-16/wwwroot/plugins/tinymce/icons/default/icons.min.js",

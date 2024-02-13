@@ -49,6 +49,10 @@ public class HomeController : QarBaseController
       [AllowAnonymous]
       public IActionResult Editor()
       {
+         using(var _connection = Utilities.GetOpenConnection())
+        {
+                ViewData["articleList"] = _connection.GetList<Article>("where qStatus = 0").ToList();
+        }
         return View();
       }
 
@@ -64,6 +68,26 @@ public class HomeController : QarBaseController
         //var cutInfo = ImageHelper.GetCutInfo(filePath,16f/9f);
         //ImageHelper.DrawCircle(filePath,500,500);
         return View();
+    }
+
+    [HttpPost]
+    [AllowAnonymous]
+    public IActionResult SaveInfo(string content)
+    {
+        if(string.IsNullOrWhiteSpace(content)) //empty, newline, tab
+            return Content("Please enter content!");
+
+         uint currentTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
+        using(var _connection = Utilities.GetOpenConnection())
+        {
+            _connection.Insert<Article>(new Article(){
+                Content = content,
+                AddTime  = currentTime,
+                UpdateTime = currentTime,
+                QStatus = 0
+                });
+        }
+          return Content("Save successfully!");
     }
     public IActionResult Index()
     {

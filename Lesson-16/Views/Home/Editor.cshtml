@@ -1,45 +1,40 @@
+@{
+  List<Article> articleList = (ViewData["articleList"]?? new List<Article>()) as List<Article>;
+}
 <main>
-  <div class="container-fluid">
-    <div class="editor-toolbar">
-      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary ebold"><i class="fa-solid fa-bold"></i></button>
-          <button type="button" class="btn btn-secondary eitalic"><i class="fa-solid fa-italic"></i></button>
-          <button type="button" class="btn btn-secondary eunderline"><i class="fa-solid fa-underline"></i></button>
-          <button type="button" class="btn btn-secondary eviolin"><i class="fa-solid fa-violin"></i></button>
-        </div>
-      </div>
-    </div>
-    <div class="elorda-editor" contenteditable="true">
-
-    </div>
+  <div>
+    <ol>
+    @foreach(Article article in articleList)
+    {
+      <li>
+        @Html.Raw(article.Content)
+      </li>
+    }
+    </ol>
   </div>
+  <form  action="/Home/SaveInfo" method="post">
+      <textarea id="elorda-editor" name="content">
+      <p><em>Hello</em>, <span style="text-decoration: underline;"><strong>World!</strong></span></p>
+        </textarea>
+        <button type="submit">Save</button>
+  </form>
+ 
 </main>
-
 @section scripts
 {
+  <script src="~/plugins/tinymce/tinymce.min.js"></script>
   <script>
-      $('.editor-toolbar button').on('click', function(){
-          let   $btn = $(this),
-                $editor = $('.elorda-editor'),
-                html = $editor.html(),
-                selectionStart = document.getSelection().anchorOffset,
-                selectionEnd = document.getSelection().focusOffset,
-                selectContent =  html.substring(selectionStart, selectionEnd);
-    
-          if($(this).hasClass('ebold')){
-              selectContent = '<b>'+selectContent+'</b>';
-              html = html.substring(0,selectionStart)+selectContent+html.substring(selectionEnd);
-              $editor.html(html);
-              $btn.addClass('active');
-          }else if($(this).hasClass('eunderline')){
-              selectContent = '<u>'+selectContent+'</u>';
-              html = html.substring(0,selectionStart)+selectContent+html.substring(selectionEnd);
-              $editor.html(html);
-              $btn.addClass('active');
-          }
+     tinymce.init({
+          selector: 'textarea#elorda-editor',
+          plugins: [
+             'a11ychecker', 'advcode', 'advlist', 'anchor', 'autolink', 'codesample', 'fullscreen', 'help',
+             'image', 'editimage', 'tinydrive', 'lists', 'link', 'media', 'powerpaste', 'preview',
+             'searchreplace', 'table', 'template', 'visualblocks', 'wordcount'
+        ],
+        toolbar: 'insertfile a11ycheck undo redo | bold italic | forecolor backcolor | template codesample | alignleft aligncenter alignright alignjustify | bullist numlist | link preview',
+        menubar: false
 
       });
-
   </script>
 }
+

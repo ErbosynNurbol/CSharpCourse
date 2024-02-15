@@ -5,7 +5,7 @@ namespace Lesson_16;
 public class QarBaseController : Controller
 { 
 
-    public readonly string no_image = "/img/no_image.png";
+    public  static readonly string no_image = "/img/no_image.png";
      public QarBaseController()
     {
     }

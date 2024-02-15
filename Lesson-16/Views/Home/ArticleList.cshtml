@@ -4,6 +4,7 @@
     int pageSize = Convert.ToInt32(ViewData["pageSize"]??10);
     int totalPage = Convert.ToInt32(ViewData["totalPage"]??0);
     int totalCount = Convert.ToInt32(ViewData["totalCount"]??0);
+    string keyWord = (ViewData["keyWord"]??string.Empty) as string;
   }
   <main>
 
@@ -15,10 +16,17 @@
         <!-- Section heading -->
         <h2 class="text-center my-5 h1">Recent posts</h2>
 
-        <!-- Section description -->
-        <p class="text-center mb-5 w-responsive mx-auto">Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.</p>
+       <div class="row">
+          <form class="col-12 offset-md-3 col-md-6" action="/article/list">
+          <div class="input-group mb-3">
+  <input type="text" class="form-control" name="keyWord"  value="@keyWord"  aria-label=""
+    aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="submit" id="button-addon2">Search</button>
+  </div>
+</div>
+          </form>
+       </div>
 
         @foreach(var article in articleList)
         {
@@ -36,9 +44,19 @@
             <a href="/article/@(article.LatynUrl).html" class="teal-text">
               <h6 class="pb-1"><i class="fas fa-heart"></i><strong> Lifestyle </strong></h6>
             </a>
-            <h4 class="mb-4"><strong>@article.Title</strong></h4>
+            @if(string.IsNullOrEmpty(keyWord)){
+                 <h4 class="mb-4"><strong>@Html.Raw(article.Title)</strong></h4>
+            }else{
+               <h4 class="mb-4"><strong>@Html.Raw(article.Title.Replace(keyWord,$"<span style='color:red;'>{keyWord}</span>"))</strong></h4>
+            }
             <p>@article.ShortDescription</p>
-            <p>by <a><strong>@article.Author</strong></a>, @addTimeStr</p>
+            <p>
+              @if(!string.IsNullOrEmpty(article.Author))
+              {
+                <text>by <a><strong>@article.Author</strong></a>, </text>
+              }
+             @addTimeStr
+            </p>
             <a  href="/article/@(article.LatynUrl).html" class="btn btn-primary">Read more</a>
           </div>
         </div>

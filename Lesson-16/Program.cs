@@ -81,6 +81,7 @@ builder.Services.Configure<FormOptions>(o => {
     o.KeyLengthLimit = int.MaxValue;
 });
 
+
 var app = builder.Build();
 
 Lesson_16.DI_IOC.App? myApp = app.Services.GetService<Lesson_16.DI_IOC.App>();
@@ -113,13 +114,13 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(
-    name: "admin",
-    pattern: "{action=article}/{query?}",
-    defaults: new {controller="Home" ,action="article"});
+    name: "default",
+    pattern: "{action=Index}/{query?}",
+    defaults: new {controller="Home" ,action="Index"});
 
-app.MapControllerRoute(
-    name: "home",
-    pattern: "{controller=Home}/{action=Index}/{query?}");
+// app.MapControllerRoute(
+//     name: "home",
+//     pattern: "{controller=Home}/{action=Index}/{query?}");
     
 app.MapFallbackToFile("404.html");
 

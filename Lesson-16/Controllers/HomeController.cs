@@ -14,6 +14,14 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using ZstdSharp.Unsafe;
 using Lesson_16.DI_IOC;
+using Microsoft.Extensions.Caching.Memory;
+using Google.Protobuf.WellKnownTypes;
+using Lesson_16.Cache;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Mvc.Abstractions;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.Rendering;
 //yafo jszp qewe vjry
 namespace Lesson_16.Controllers;
 
@@ -22,18 +30,20 @@ public class HomeController : QarBaseController
 {
     IConfiguration _configuration;
     IWebHostEnvironment _webHostEnvironment;
-    public HomeController(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
-    {
-          _configuration = configuration;
-          _webHostEnvironment = webHostEnvironment;
+    IMemoryCache _memoryCache;
 
+    public HomeController(IConfiguration configuration, IWebHostEnvironment webHostEnvironment,IMemoryCache memoryCache)
+    {
+         _configuration = configuration;
+          _webHostEnvironment = webHostEnvironment;
+          _memoryCache = memoryCache;
     }
-  
 
      [AllowAnonymous]
      public IActionResult Article(string query)
      {
          query = (query??string.Empty).ToLower();
+         query =string.IsNullOrEmpty(query)?"list":query;
          if(query.Equals("list"))
          {  
                 int page = GetIntQueryParam("page",1);
@@ -43,12 +53,13 @@ public class HomeController : QarBaseController
                 string keyWord = GetStringQueryParam("keyWord");
                 ViewData["page"] = page;
                 ViewData["pageSize"] = pageSize;
+                ViewData["keyWord"] = keyWord;
                 using(var _connection = Utilities.GetOpenConnection())
                 {
-                   string querySql = "where qStatus = 0";
+                   string querySql = "where qStatus = 0 ";
                    if(!string.IsNullOrEmpty(keyWord))
                    {
-                        querySql += " and keyWord = @keyWord ";
+                        querySql += " and MATCH(title,fullDescription) AGAINST(@keyWord IN NATURAL LANGUAGE MODE) ";
                    }
                    object queryObj = new {keyWord,start = (page-1)*pageSize,length = pageSize};
                    int totalCount = _connection.RecordCount<Article>(querySql,queryObj);
@@ -66,7 +77,18 @@ public class HomeController : QarBaseController
                 }
                return View("~/Views/Home/ArticleList.cshtml"); 
          }else{
-
+                 query = query.EndsWith(".html")?query.Substring(0,query.Length-5):query; //Latyn url
+                 Article article = null;
+                   using(var _connection = Utilities.GetOpenConnection())
+                      {
+                       article =  _connection.GetList<Article>("where qStatus = 0 and latynUrl = @latynUrl",new {latynUrl = query}).FirstOrDefault();
+                       if(article == null) return Redirect("/404.html");
+                    //    article.ViewCount+=1;
+                    //    _connection.Update<Article>(article);
+                       _connection.ExecuteAsync("update article set viewCount += 1 where id = @articleId",new {articleId = article.Id});
+                     }
+                 ViewData["article"] = article;
+                 ViewData["latestArticleList"] =  ElCache.GetLatestArticleList(_memoryCache,3);
 
             return View("~/Views/Home/ArticleView.cshtml"); 
          }
@@ -132,14 +154,23 @@ public class HomeController : QarBaseController
         }
           return Content("Save successfully!");
     }
-    public IActionResult Index()
+
+
+   [AllowAnonymous]
+    public  IActionResult Index(string query)
     {
         // int number =  10;
         // App app = new App(new FileLogger());
         // //Dependency Injection => DI
 
         // app.SaveLog("Error content!");
-        return View();
+    //    string filePath  = _webHostEnvironment.WebRootPath+"/404.html";
+    //    if(System.IO.File.Exists(filePath)){
+    //        string html = System.IO.File.ReadAllText(filePath);
+    //        return Content(html,"text/html");
+    //    }
+
+         return View();
     }
 
     public IActionResult Alem()

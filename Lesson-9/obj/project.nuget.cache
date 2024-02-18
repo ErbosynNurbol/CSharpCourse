@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "FwCRZRK1fFzXgjTPZ42xlQAaDDReYXzVql/HokssNLMUBQ6r+XUdU4daby04JLsy41yNOXPS3zqCKTg/IqaODA==",
-  "success": true,
+  "dgSpecHash": "5J0/ieOQogvj3uuNTuSMnzQMS1SG1TuejxgPlXM7yymuWxDpf2dglYe7HBSNAaqjWZSTvd51UXQiaA4IjDlclQ==",
+  "success": false,
   "projectFilePath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-9/Lesson-9.csproj",
   "expectedPackageFiles": [
     "/Users/erbosynnurbol/.nuget/packages/bouncycastle.cryptography/2.2.1/bouncycastle.cryptography.2.2.1.nupkg.sha512",
@@ -17,5 +17,15 @@
     "/Users/erbosynnurbol/.nuget/packages/system.security.cryptography.pkcs/7.0.3/system.security.cryptography.pkcs.7.0.3.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/system.text.encoding.codepages/7.0.0/system.text.encoding.codepages.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: HtmlAgilityPack from 1.11.59 to 1.11.57. Reference the package directly from the project to select a different version. \n Lesson-9 -> COMMON -> HtmlAgilityPack (>= 1.11.59) \n Lesson-9 -> HtmlAgilityPack (>= 1.11.57)",
+      "libraryId": "HtmlAgilityPack",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

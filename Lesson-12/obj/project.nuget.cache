@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "g723DHjoggOmqcT8fFNazFW0KNj5cNCBOdfD1WzYGdv7C/imRIVqHDZysmJ5bSTNxaTb00MRCC7flnCcCTB7gQ==",
+  "dgSpecHash": "oeYgpKCaQU92dBrXxiRpe3EdUZ4jxGZLAUeLA2kT3QLVu0Oiql7WAY0wiVWo5s6ENMXbDXsoR6tzt6RDZZekvw==",
   "success": true,
   "projectFilePath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/Lesson-12/Lesson-12.csproj",
   "expectedPackageFiles": [
     "/Users/erbosynnurbol/.nuget/packages/bouncycastle.cryptography/2.2.1/bouncycastle.cryptography.2.2.1.nupkg.sha512",
+    "/Users/erbosynnurbol/.nuget/packages/htmlagilitypack/1.11.59/htmlagilitypack.1.11.59.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/mailkit/4.3.0/mailkit.4.3.0.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/mimekit/4.3.0/mimekit.4.3.0.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",

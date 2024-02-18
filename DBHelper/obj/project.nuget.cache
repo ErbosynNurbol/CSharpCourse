@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gWyOzc4jbqG10APxHjpMxS16yA12dNvWbFsNe6BWnxYJ+NVGI3jcLJLzpOGrTJtgW20BYbj2EjXoezGnyc5fYw==",
+  "dgSpecHash": "N6hnWalR0B+i9L8+xD4SPlA5R4hKkQn5DeKwhDvvvaBHgvBQB3/yB3twdBuF5q/svPISKOsHGuI6TJ4zrFTiMw==",
   "success": true,
   "projectFilePath": "/Users/erbosynnurbol/Documents/GitHub/CSharpCourse/DBHelper/DBHelper.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/Users/erbosynnurbol/.nuget/packages/dapper/2.1.28/dapper.2.1.28.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/dapper.simplecrud/2.3.0/dapper.simplecrud.2.3.0.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/google.protobuf/3.21.9/google.protobuf.3.21.9.nupkg.sha512",
+    "/Users/erbosynnurbol/.nuget/packages/htmlagilitypack/1.11.59/htmlagilitypack.1.11.59.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/k4os.compression.lz4/1.3.5/k4os.compression.lz4.1.3.5.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/k4os.compression.lz4.streams/1.3.5/k4os.compression.lz4.streams.1.3.5.nupkg.sha512",
     "/Users/erbosynnurbol/.nuget/packages/k4os.hash.xxhash/1.0.8/k4os.hash.xxhash.1.0.8.nupkg.sha512",

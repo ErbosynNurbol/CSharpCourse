@@ -71,6 +71,7 @@ builder.Services.AddControllersWithViews(options =>
     options.Filters.Add(typeof(Lesson_16.Filters.QarActionFilter));
 });
 
+
 builder.Services.AddSession();
 
 builder.Services.Configure<FormOptions>(o => {
@@ -115,8 +116,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{action=Index}/{query?}",
-    defaults: new {controller="Home" ,action="Index"});
+    pattern: "{culture=kz}/{action=Index}/{query?}",
+    defaults: new {controller="Home" ,action="Index"},
+    constraints: new { culture = "kz|ru|en|zh-cn|tote|latyn|tr" }
+);
 
 // app.MapControllerRoute(
 //     name: "home",

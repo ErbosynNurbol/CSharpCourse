@@ -11,6 +11,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
     <PackageReference Include="MailKit" Version="4.3.0"/>
     <PackageReference Include="SkiaSharp" Version="3.0.0-preview.1.8"/>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.59"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../MODEL/MODEL.csproj"/>

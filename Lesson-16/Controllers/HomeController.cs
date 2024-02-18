@@ -22,6 +22,8 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Xml.Serialization;
+using System.Text;
 //yafo jszp qewe vjry
 namespace Lesson_16.Controllers;
 
@@ -31,7 +33,7 @@ public class HomeController : QarBaseController
     IConfiguration _configuration;
     IWebHostEnvironment _webHostEnvironment;
     IMemoryCache _memoryCache;
-
+    private readonly object _lockArticle = new object();
     public HomeController(IConfiguration configuration, IWebHostEnvironment webHostEnvironment,IMemoryCache memoryCache)
     {
          _configuration = configuration;
@@ -39,9 +41,30 @@ public class HomeController : QarBaseController
           _memoryCache = memoryCache;
     }
 
+
+    private string GetHtmlContent(string viewName)
+    {
+    //      string htmlContent = string.Empty;
+    //       Task.Run(async ()=>{
+    //           var viewEngineResult =  _viewEngine.FindView(ControllerContext,viewName,false);
+    //            if(viewEngineResult==null || viewEngineResult.View == null)
+    //             {
+    //                 throw new Exception("View not found!");
+    //             };
+    //             using(StringWriter writer = new StringWriter(new StringBuilder()))
+    //             {
+    //                 var ViewContext =  new ViewContext(ControllerContext,viewEngineResult.View,ViewData,TempData,writer,new HtmlHelperOptions());
+    //                 await viewEngineResult.View.RenderAsync(ViewContext);
+    //                 htmlContent = writer.GetStringBuilder().ToString();
+    //             }
+    //     }).Wait();
+    //    return htmlContent; 
+    return "";
+    }
      [AllowAnonymous]
      public IActionResult Article(string query)
      {
+         string language = (ViewData["language"]??string.Empty) as string;
          query = (query??string.Empty).ToLower();
          query =string.IsNullOrEmpty(query)?"list":query;
          if(query.Equals("list"))
@@ -78,18 +101,46 @@ public class HomeController : QarBaseController
                return View("~/Views/Home/ArticleList.cshtml"); 
          }else{
                  query = query.EndsWith(".html")?query.Substring(0,query.Length-5):query; //Latyn url
-                 Article article = null;
+                 string filePath = _webHostEnvironment.WebRootPath+$"/article/{query}.html";
+                 string htmlContent = string.Empty;
+                
+                    if(System.IO.File.Exists(filePath))
+                     {
+                         htmlContent = System.IO.File.ReadAllText(filePath);
+                         return Content(htmlContent,"text/html");
+                      }
+                   Article article = null;
                    using(var _connection = Utilities.GetOpenConnection())
                       {
                        article =  _connection.GetList<Article>("where qStatus = 0 and latynUrl = @latynUrl",new {latynUrl = query}).FirstOrDefault();
-                       if(article == null) return Redirect("/404.html");
-                    //    article.ViewCount+=1;
-                    //    _connection.Update<Article>(article);
-                       _connection.ExecuteAsync("update article set viewCount += 1 where id = @articleId",new {articleId = article.Id});
+                       if(article == null) 
+                                return Redirect("/404.html");
+                       _connection.Execute("update article set viewCount = viewCount + 1 where id = @articleId",new {articleId = article.Id});
                      }
-                 ViewData["article"] = article;
+                   ViewData["article"] = article;
                  ViewData["latestArticleList"] =  ElCache.GetLatestArticleList(_memoryCache,3);
 
+
+            //  lock(_lockArticle)
+            //  {
+            //        Article article = null;
+            //        using(var _connection = Utilities.GetOpenConnection())
+            //           {
+            //            article =  _connection.GetList<Article>("where qStatus = 0 and latynUrl = @latynUrl",new {latynUrl = query}).FirstOrDefault();
+            //            if(article == null) return Redirect("/404.html");
+            //         //    article.ViewCount+=1;
+            //         //    _connection.Update<Article>(article);
+            //            _connection.Execute("update article set viewCount = viewCount + 1 where id = @articleId",new {articleId = article.Id});
+            //          }
+            //      ViewData["article"] = article;
+            //      ViewData["latestArticleList"] =  ElCache.GetLatestArticleList(_memoryCache,3);
+            //      htmlContent =  GetHtmlContent("ArticleView");
+            //      if(!System.IO.Directory.Exists(Path.GetDirectoryName(filePath))){
+            //          System.IO.Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+            //      }
+            //       System.IO.File.WriteAllText(filePath,htmlContent);
+            //    }
+                
             return View("~/Views/Home/ArticleView.cshtml"); 
          }
      }

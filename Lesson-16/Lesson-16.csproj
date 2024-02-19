@@ -5,10 +5,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Lesson_16</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
-      <ProjectReference Include = "../MODEL/MODEL.csproj" />
-      <ProjectReference Include = "../COMMON/COMMON.csproj" />
-     <ProjectReference Include = "../DBHelper/DBHelper.csproj" />
+    <ProjectReference Include="../MODEL/MODEL.csproj"/>
+    <ProjectReference Include="../COMMON/COMMON.csproj"/>
+    <ProjectReference Include="../DBHelper/DBHelper.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.8.10"/>
+    <PackageReference Include="Hangfire.MemoryStorage.Core" Version="1.4.0"/>
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0"/>
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1"/>
   </ItemGroup>
 </Project>

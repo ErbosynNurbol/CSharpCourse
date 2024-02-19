@@ -115,7 +115,8 @@ public class HomeController : QarBaseController
                        article =  _connection.GetList<Article>("where qStatus = 0 and latynUrl = @latynUrl",new {latynUrl = query}).FirstOrDefault();
                        if(article == null) 
                                 return Redirect("/404.html");
-                       _connection.Execute("update article set viewCount = viewCount + 1 where id = @articleId",new {articleId = article.Id});
+                       ElordaSingleton.GetInstance.EnqueueViewArticleId(article.Id);   
+                       //_connection.Execute("update article set viewCount = viewCount + 1 where id = @articleId",new {articleId = article.Id});
                      }
                    ViewData["article"] = article;
                  ViewData["latestArticleList"] =  ElCache.GetLatestArticleList(_memoryCache,3);
@@ -210,6 +211,7 @@ public class HomeController : QarBaseController
    [AllowAnonymous]
     public  IActionResult Index(string query)
     {
+
         // int number =  10;
         // App app = new App(new FileLogger());
         // //Dependency Injection => DI
@@ -547,6 +549,7 @@ public class HomeController : QarBaseController
                 catch (Exception ex)
                 {
                     tran.Rollback();
+                     Serilog.Log.Error(ex,"Register");
                     return MessageHelper.RedirectAjax(ex.Message, "error", "", null);
                 }
             }

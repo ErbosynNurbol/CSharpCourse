@@ -2,10 +2,15 @@ global using Microsoft.AspNetCore.Mvc;
 using COMMON;
 using Dapper;
 using DBHelper;
+using Hangfire;
+using Hangfire.MemoryStorage;
 using Lesson_16.DI_IOC;
+using Lesson_16.Hangfire;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.StaticFiles;
+using Serilog;
+using Serilog.Events;
 
 //DI  => Dependency Injection
 //IOC => Inverion of Control
@@ -49,6 +54,12 @@ ElordaSingleton.GetInstance.SetConnectionString(connectionStrings);
 //     };
 // });
 
+Log.Logger = new LoggerConfiguration()
+.MinimumLevel.Error()
+.MinimumLevel.Override("Microsoft", LogEventLevel.Error)
+.Enrich.FromLogContext()
+.WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day, retainedFileCountLimit: null)
+.CreateLogger();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -81,7 +92,11 @@ builder.Services.Configure<FormOptions>(o => {
     o.MemoryBufferThreshold = int.MaxValue;
     o.KeyLengthLimit = int.MaxValue;
 });
+builder.Services.AddHangfire(x => x.UseMemoryStorage());
+builder.Services.AddTransient<Lesson_16.Hangfire.SiteJob>();
+builder.Services.AddHangfireServer();
 
+builder.Services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
 
 var app = builder.Build();
 
@@ -120,11 +135,14 @@ app.MapControllerRoute(
     defaults: new {controller="Home" ,action="Index"},
     constraints: new { culture = "kz|ru|en|zh-cn|tote|latyn|tr" }
 );
-
 // app.MapControllerRoute(
 //     name: "home",
 //     pattern: "{controller=Home}/{action=Index}/{query?}");
     
 app.MapFallbackToFile("404.html");
-
+app.UseHangfireDashboard();
+//BackgroundJob.Enqueue<SiteJob>((x) => x.JobRunAtMinutes()); //
+//BackgroundJob.Schedule<SiteJob>((x) => x.JobRunAtMinutes(),TimeSpan.FromMinutes(1));
+RecurringJob.AddOrUpdate<SiteJob>("jobRunAtMinutes",(x) => x.JobRunAtMinutes(),"*/1 * * * *");
+RecurringJob.AddOrUpdate<SiteJob>("jobDeleteOldLogFiles",(x) => x.JobDeleteOldLogFiles(),Cron.Daily);
 app.Run();

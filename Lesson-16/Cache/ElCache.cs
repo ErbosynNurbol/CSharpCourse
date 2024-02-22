@@ -1,3 +1,7 @@
+using System.Collections.Specialized;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using COMMON;
 using Dapper;
 using DBHelper;
 using Microsoft.Extensions.Caching.Memory;
@@ -7,6 +11,51 @@ namespace Lesson_16.Cache;
 
 public class ElCache
 {
+
+    private static Dictionary<string,Dictionary<string,string>> GetLanguagePack(IMemoryCache _memoryCache)
+    {
+           string key = "languagePack";
+            Dictionary<string,Dictionary<string,string>> languagePack = null;
+           if(!_memoryCache.TryGetValue<Dictionary<string,Dictionary<string,string>>>(key,out languagePack))
+           {
+               languagePack  = LangugePackHelper.LangugePack();
+               _memoryCache.Set<Dictionary<string,Dictionary<string,string>>>(key,languagePack,DateTimeOffset.MaxValue);
+           }
+          return languagePack;
+    }
+
+    public void ClearLanguagePackCache(IMemoryCache _memoryCache)
+    {
+        _memoryCache.Remove("languagePack");
+    }
+
+    public static string GetLanguageValue(IMemoryCache _memoryCache, string localKey,string language) 
+    {
+          var dic =  ElCache.GetLanguagePack(_memoryCache);
+           switch(language)
+           {
+            case "latyn":{
+                 if(dic.ContainsKey(localKey) && dic[localKey].ContainsKey("kz")){
+                    return ConvertHelper.Cyrl2Latyn(dic[localKey]["kz"]);
+                 }
+            }break;
+               case "tote":{
+                  if(dic.ContainsKey(localKey) && dic[localKey].ContainsKey("kz")){
+                    return Cyrl2ToteHelper.Cyrl2Tote(dic[localKey]["kz"]);
+                 }
+
+               }break;
+               default:{
+                    if(dic.ContainsKey(localKey) && dic[localKey].ContainsKey(language))
+                            return dic[localKey][language];
+               } break;
+           }
+            
+             return localKey;
+    }
+    
+
+    #region Get Latest Article List +GetLatestArticleList(IMemoryCache _memoryCache,int takeCount)
     public static List<Article> GetLatestArticleList(IMemoryCache _memoryCache,int takeCount)
     {
             string key = $"latestArticleList_{takeCount}";
@@ -31,6 +80,7 @@ public class ElCache
             }
            return latestArticleList;
     }
+    #endregion
 
     public static void ClearLatestArticleListCache(IMemoryCache _memoryCache)
     {

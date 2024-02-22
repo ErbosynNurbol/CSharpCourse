@@ -34,7 +34,7 @@ public class HomeController : QarBaseController
     IWebHostEnvironment _webHostEnvironment;
     IMemoryCache _memoryCache;
     private readonly object _lockArticle = new object();
-    public HomeController(IConfiguration configuration, IWebHostEnvironment webHostEnvironment,IMemoryCache memoryCache)
+    public HomeController(IConfiguration configuration, IWebHostEnvironment webHostEnvironment,IMemoryCache memoryCache) :base(memoryCache)
     {
          _configuration = configuration;
           _webHostEnvironment = webHostEnvironment;
@@ -211,7 +211,7 @@ public class HomeController : QarBaseController
    [AllowAnonymous]
     public  IActionResult Index(string query)
     {
-
+           string login = T("ls_Login");
         // int number =  10;
         // App app = new App(new FileLogger());
         // //Dependency Injection => DI

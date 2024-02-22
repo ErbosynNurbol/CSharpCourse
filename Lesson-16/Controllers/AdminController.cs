@@ -4,6 +4,7 @@ using DBHelper;
 using Lesson_16.DI_IOC;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Timeouts;
+using Microsoft.Extensions.Caching.Memory;
 using MODEL;
 
 namespace Lesson_16;
@@ -14,7 +15,7 @@ public class AdminController : QarBaseController
 {
 
   IWebHostEnvironment _environment;
-  public AdminController(IWebHostEnvironment environment)
+  public AdminController(IWebHostEnvironment environment,IMemoryCache memoryCache):base(memoryCache)
   {
     _environment = environment;
   }

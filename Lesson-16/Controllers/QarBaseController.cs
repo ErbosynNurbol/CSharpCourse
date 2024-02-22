@@ -1,4 +1,6 @@
 using COMMON;
+using Lesson_16.Cache;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Lesson_16;
 
@@ -6,8 +8,10 @@ public class QarBaseController : Controller
 { 
 
     public  static readonly string no_image = "/img/no_image.png";
-     public QarBaseController()
+    IMemoryCache _memoryCache;
+     public QarBaseController(IMemoryCache memoryCache)
     {
+        _memoryCache = memoryCache;
     }
 
        #region  Қолданушының IP әдіресін алу +GetIPAddress()
@@ -36,4 +40,10 @@ public class QarBaseController : Controller
      {
          return Request.Query[paramName].ToString();
      }
+
+    public  string T(string localKey)
+    {
+         string language =  (ViewData["language"]??string.Empty) as string;
+         return ElCache.GetLanguageValue(_memoryCache,localKey,language);
+    }
 }

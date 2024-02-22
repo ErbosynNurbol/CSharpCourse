@@ -211,7 +211,7 @@ public class HomeController : QarBaseController
    [AllowAnonymous]
     public  IActionResult Index(string query)
     {
-           string login = T("ls_Login");
+        string login = T("ls_Login");
         // int number =  10;
         // App app = new App(new FileLogger());
         // //Dependency Injection => DI

@@ -46,6 +46,80 @@ public class AdminController : QarBaseController
     return View();
   }
 
+   public IActionResult Service(string query)
+  {
+     string language = (ViewData["language"]??string.Empty) as string;
+    query = (query ?? string.Empty).ToLower();
+    ViewData["query"] = query;
+    ViewData["ip"] = GetIPAddress();
+    uint personId = GetPersonId();
+    switch (query)
+    {
+      case "create":
+        {
+
+        }
+        break;
+      case "edit":
+        {
+          int serviceId = GetIntQueryParam("id",0);
+          if(serviceId<=0) 
+            return Redirect("/404.html");
+            using(var _connection = Utilities.GetOpenConnection())
+            { 
+                 Service service =    _connection.GetList<Service>("where qStatus = 0 and id = @serviceId ", new {serviceId}).FirstOrDefault();
+                 if(service == null)
+                    return Redirect("/404.html");
+                    
+                 ViewData["service"] = service;
+                 ViewData["multiLanguageList"] = GetMultiLanguageList(_connection,nameof(MODEL.Service),new List<uint>(){service.Id});
+            }
+        }
+        break;
+      case "list":
+        {
+                  int page = GetIntQueryParam("page",1);
+                page = page<=0?1:page;
+                int pageSize = GetIntQueryParam("pageSize",10);
+                pageSize = pageSize<=0?10:pageSize;
+                ViewData["page"] = page;
+                ViewData["pageSize"] = pageSize;
+                using(var _connection = Utilities.GetOpenConnection())
+                {
+                   string querySql = "where qStatus = 0 ";
+                   object queryObj = new {start = (page-1)*pageSize,length = pageSize};
+                   int totalCount = _connection.RecordCount<Service>(querySql,queryObj);
+                   ViewData["totalCount"]  = totalCount;
+                   ViewData["totalPage"] = totalCount / pageSize + (totalCount % pageSize == 0 ? 0 : 1);
+                   var serviceList = _connection.GetList<Service>(querySql + " order by addTime desc limit @start, @length ",queryObj).ToList();
+                   if(serviceList.Count()>0)
+                   {
+                       List<Multilanguage> multiLanguageList = GetMultiLanguageList(_connection,nameof(MODEL.Service),serviceList.Select(x=>x.Id).ToList(),language,new List<string>(){"title","content"});
+                      foreach(var service in serviceList)
+                      {
+                            var serviceTitle = multiLanguageList.FirstOrDefault(x=>x.ColumnId == service.Id && x.ColumnName.Equals("title"));
+                            if(serviceTitle!=null)
+                            {
+                              service.Title = serviceTitle.ColumnValue;
+                            }
+
+                             var serviceContent = multiLanguageList.FirstOrDefault(x=>x.ColumnId == service.Id && x.ColumnName.Equals("content"));
+                            if(serviceContent!=null)
+                            {
+                              service.Content = serviceContent.ColumnValue;
+                            }
+                      }
+                 
+                   }
+
+                   ViewData["serviceList"] = serviceList;
+            }
+        }
+        break;
+    }
+    return View();
+  }
+
   public IActionResult Media(string query)
   {
     query = (query ?? string.Empty).ToLower();
@@ -75,6 +149,74 @@ public class AdminController : QarBaseController
     }
     return View();
   }
+
+
+  [HttpPost]
+  public IActionResult CreateOrEditService(Service item,string multiJsonStr)
+  {
+    string language = (ViewData["language"]??string.Empty) as string;
+    item.Content = item.Content??string.Empty;
+    if(string.IsNullOrEmpty(item.Title)||string.IsNullOrEmpty(item.Title = item.Title.Trim()))
+        return MessageHelper.RedirectAjax(T("ls_Thisfieldisrequired"),"error","","title");
+    if(item.Title.Length>255)
+         return MessageHelper.RedirectAjax(T("ls_Thetextenteredexceedsthemaximumlength"),"error","","title");
+
+    List<Multilanguage> multiLanguageList = new List<Multilanguage>();
+    if(!string.IsNullOrEmpty(multiJsonStr)){
+      try{
+          multiLanguageList = JsonHelper.DeserializeObject<List<Multilanguage>>(multiJsonStr);
+      }catch(Exception ex){
+          Serilog.Log.Error(ex,"CreateOrEditService");
+      }
+    }
+      uint currentTime = UnixTimeHelper.ConvertToUnixTime(DateTime.Now);
+      int? result = null;
+      using(var _connection = Utilities.GetOpenConnection())
+      {
+         if(item.DisplayOrder == 0){
+             item.DisplayOrder =  _connection.Query<uint?>("select max(displayOrder) from service where qStatus = 0").FirstOrDefault()??0;
+             item.DisplayOrder += 1;
+          }
+
+        if(item.Id == 0)
+        {
+          result =  _connection.Insert<Service>(new Service(){
+                Title = item.Title,
+                Content = item.Content,
+                DisplayOrder = item.DisplayOrder,
+                AddTime = currentTime,
+                UpdateTime = currentTime,
+                QStatus  = 0
+            });
+          if(result>0)
+          {
+                SaveMutliLanguage(_connection,multiLanguageList,nameof(MODEL.Service),Convert.ToUInt32(result));
+                return MessageHelper.RedirectAjax(T("ls_SavedSuccessfully"),"success",$"/{language}/admin/service/list","");
+          }
+                
+        }else{
+            Service service =  _connection.GetList<Service>("where qStatus = 0 and id = @serviceId", new {serviceId = item.Id}).FirstOrDefault();
+            if(service ==null)
+                 return MessageHelper.RedirectAjax(T("ls_Isdeletedoridiswrong"),"error","","");
+          service.Title = item.Title;
+          service.Content = item.Content;
+          service.DisplayOrder = item.DisplayOrder;
+          service.UpdateTime = currentTime;
+         result =  _connection.Update<Service>(service);
+         if(result > 0)
+         {
+            SaveMutliLanguage(_connection,multiLanguageList,nameof(MODEL.Service),service.Id);
+            return MessageHelper.RedirectAjax(T("ls_Updatesuccessfully"),"success",$"/{language}/admin/service/edit?id={service.Id}","");
+         }
+        }
+      
+          return MessageHelper.RedirectAjax(T("ls_Savefailed"),"error","","");
+      }
+
+  }
+
+
+
 
   #region Upload Media +UploadMedia(IFormFile mFile)
 

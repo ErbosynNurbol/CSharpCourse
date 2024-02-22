@@ -68,9 +68,9 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 }).AddCookie(options =>
 {
-    options.LoginPath = new PathString("/home/login/");
-    options.AccessDeniedPath = new PathString("/home/login/");
-    options.LogoutPath = new PathString("/home/signout/");
+    options.LoginPath = new PathString("/kz/home/login/");
+    options.AccessDeniedPath = new PathString("/kz/home/login/");
+    options.LogoutPath = new PathString("/kz/home/signout/");
     options.Cookie.Path = "/";
     options.SlidingExpiration = true;
     options.Cookie.Name = "qar_cookie";
@@ -135,9 +135,11 @@ app.MapControllerRoute(
     defaults: new {controller="Home" ,action="Index"},
     constraints: new { culture = "kz|ru|en|zh-cn|tote|latyn|tr" }
 );
-// app.MapControllerRoute(
-//     name: "home",
-//     pattern: "{controller=Home}/{action=Index}/{query?}");
+app.MapControllerRoute(
+    name: "home",
+    pattern: "{culture=kz}/{controller=Home}/{action=Index}/{query?}",
+    constraints: new { culture = "kz|ru|en|zh-cn|tote|latyn|tr" }
+    );
     
 app.MapFallbackToFile("404.html");
 app.UseHangfireDashboard();

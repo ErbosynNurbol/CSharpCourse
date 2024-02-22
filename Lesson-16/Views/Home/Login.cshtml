@@ -1,5 +1,6 @@
 @{
     Layout =  "~/Views/Shared/LayoutMember.cshtml";
+    string language = (ViewData["language"]??string.Empty) as string;
 }
 <div class="container">
           <div class="row">
@@ -9,7 +10,7 @@
                   <div class="form-header purple-gradient">
                     <h3 class="font-weight-500 my-2 py-1"><i class="fas fa-user"></i> Log in:</h3>
                   </div>
-                  <form action="/Home/Login" method="post" id="form-login">
+                  <form action="/@language/Home/Login" method="post" id="form-login">
                   <div class="md-form">
                     <i class="fas fa-envelope prefix white-text"></i>
                     <input type="text" id="email" name="email" class="form-control">

@@ -1,0 +1,60 @@
+<script>
+    $(function () {
+        $('form#service').on('submit', function () {
+            var $form = $(this),
+                $btn = $form.find('button[type="submit"]'),
+                $elems = $form.find('[data-multilanguage]'),
+                formData = new FormData($form[0]),
+                multiArr = [];
+            $elems.each(function (index, elem) {
+                var $current = $(elem),
+                    type = $current.attr('data-multilanguage'),
+                    name = $current.attr('name'),
+                    nArr = name.split("_"),
+                    value = "";
+                if (type == "input" || type == "textarea") {
+                    value = $current.val();
+                }
+
+                multiArr.push({
+                    columnName: nArr[0],
+                    language: nArr[1],
+                    columnValue: value
+                });
+            });
+            formData.append('multiJsonStr', JSON.stringify(multiArr));
+
+            $.$btnStatus($btn, "loading");
+            
+            $.ajax({
+                url: $form.attr('action'),
+                data: formData,
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                success: function (data) {
+                    if (data['status'] == "success") {
+                        toastr.success(data['message']);
+                        setTimeout(function () {
+                            window.location.href = data['backUrl'];
+                        }, 700);
+                    } else {
+                        $.$btnStatus($btn, "reset");
+                        var $elem = $form.find('[name="' + data["data"] + '"]')
+                        if ($elem.length > 0) {
+                            $elem.focus();
+                            $.$setFormInputStatus($elem, data['message']);
+                            return;
+                        }
+                        toastr.error(data['message']);
+                    }
+
+                }
+            });
+            return false;
+        });
+
+    })
+
+
+</script>

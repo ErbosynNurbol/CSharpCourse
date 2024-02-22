@@ -1,0 +1,24 @@
+@{
+    string language = (ViewData["language"]??string.Empty) as string;
+    List<Service> serviceList = (ViewData["serviceList"]??new List<Service>()) as List<Service>;
+}
+<main>
+      @foreach(var service in serviceList)
+        {
+          string addTimeStr =  COMMON.UnixTimeHelper.UnixTimeToDateTime(service.AddTime).ToString("dd/MM/yyyy hh:mm");
+        <div class="row">
+          <div class="col-12">
+              <h4 class="mb-4" ><strong rel="qar-static-text">@Html.Raw(service.Title)</strong></h4>
+            <p>@service.Content</p>
+            <p>
+             @addTimeStr
+            </p>
+            <a  href="/@language/admin/service/edit?id=@service.Id" class="btn btn-primary">@T("ls_Edit")</a>
+          </div>
+        </div>
+            @if(service!= serviceList.LastOrDefault())
+            {
+                <hr class="mb-5">
+            }
+        }
+</main>

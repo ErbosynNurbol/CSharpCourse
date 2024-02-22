@@ -1,0 +1,19 @@
+@{
+    string query  = (ViewData["query"]??string.Empty) as string;
+}
+
+@if(query.Equals("create")||query.Equals("edit"))
+{
+      <partial name="~/Views/Admin/Partial/Service/CreateOrEdit.cshtml" />  
+      @section scripts
+      {
+        <partial name="~/Views/Admin/Partial/Service/CreateOrEditScripts.cshtml" />  
+      }
+}else{
+       <partial name="~/Views/Admin/Partial/Service/List.cshtml" /> 
+     @section scripts
+      {
+        <partial name="~/Views/Admin/Partial/Service/ListScripts.cshtml" />    
+      }
+      
+}

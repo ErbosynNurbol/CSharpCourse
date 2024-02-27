@@ -1,0 +1,49 @@
+@{
+    string language = (ViewData["language"] ?? string.Empty) as string;
+}
+<script>
+    $(function () {
+        $('#article-list').DataTable({
+        "autoWidth": true,
+        "destroy": true,
+        "processing": true,
+        "serverSide": true,
+            "ajax": function (data, callback, setting) {
+                $.ajax({
+                    url: "/@language/Admin/GetArticleList",
+                    type: "POST",
+                    data: {
+                        "keyWord": data.search.value,
+                        "start": data.start,
+                        "length": data.length
+                    },
+                    success: function (data) {
+                        var qData = data["data"],
+                            result = {},
+                            total = parseInt(qData["total"]);
+                        result.data = total > 0 ? qData["dataList"] : [];
+                        result.recordsFiltered = total;
+                        result.recordsTotal = total;
+                        callback(result);
+                    }
+                });
+            },
+            "columns": [
+                {
+                    "data": "title",
+                    "orderable": true
+                },
+                 {
+            "data": null,
+            "orderable": false,
+            "width": "100px",
+            "bSortable": false,
+            "render": function (data, type, row) {
+              return '<a class="btn btn-sm btn-edit" href="/kz/admin/article/edit?id=' + row.id +'"><i class="fal fa-pen"></i></a>';
+            }
+        }
+            ]
+        });
+
+    });
+</script>

@@ -336,4 +336,30 @@ public class AdminController : QarBaseController
           return Json(new {OK="success"});
       }
   }
+
+
+  [HttpPost]
+  public IActionResult GetArticleList(int start, int length, string keyWord)
+  {
+
+    using(var _connection = Utilities.GetOpenConnection())
+    {
+              string querySql = "where qStatus =  0 ";
+              object queryObj = new {keyWord = $"%{keyWord}%",start,length};
+              string orderBySql = " order by addTime desc ";
+              if(!string.IsNullOrEmpty(keyWord)){
+                  querySql  += " and title like @keyWord";
+              }
+           int total = _connection.RecordCount<Article>(querySql,queryObj);
+          var dataList =  _connection.GetList<Article>(querySql + orderBySql+" limit @start,@length",queryObj).Select(x=>new {
+            x.Title,
+            x.AddTime,
+            x.Id
+          }).ToList();
+          
+        return MessageHelper.RedirectAjax("Search successfulll!","success","", new {total,dataList});
+    }
+  
+
+  }
 }
